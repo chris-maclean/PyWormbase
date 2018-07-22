@@ -1,3 +1,15 @@
+"""Support for the Mapping endpoints of the Wormbase REST API
+
+The endpoints available are:
+
+```
+/map/cdna/:id/:region
+/map/cds/:id/:region
+/map/translation/:id/:region
+```
+
+"""
+
 from ..util import wormbase_get, wormbase_post
 
 class MappingMixin:
