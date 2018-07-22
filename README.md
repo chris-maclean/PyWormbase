@@ -5,7 +5,7 @@ This package is an interface to the WormBase REST API. You can use it in your Py
 Installation is simple with `pip`. Simply run
 
 ```Python
-$ pip install pywormbase
+> pip install pywormbase
 ```
 
 to retrieve this package from the PyPI package index.
