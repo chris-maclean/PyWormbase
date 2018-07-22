@@ -2,13 +2,14 @@
 This package is an interface to the WormBase REST API. You can use it in your Python programs to retrieve data from the WormBase API without needing to learn the details of REST API interactions. The function names are intelligent and documentation is provided. This package is targeted toward Wormbase users who want to get data from Wormbase faster than using the web site.
 
 ## Installation
-Installation is simple with `pip`. Simply run
+Coming soon!
+<!-- Installation is simple with `pip`. Simply run
 
 ```Python
 > pip install pywormbase
 ```
 
-to retrieve this package from the PyPI package index.
+to retrieve this package from the PyPI package index. -->
 
 ## Usage
 Wormbase's API is free and open. No credentials, keys, or tokens are needed to access it. This makes PyWormbase easy to use in scripts, too. First, import PyWormbase, then instantiate a PyWormbase object:
