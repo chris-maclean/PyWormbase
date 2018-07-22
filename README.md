@@ -14,11 +14,11 @@ to retrieve this package from the PyPI package index.
 Wormbase's API is free and open. No credentials, keys, or tokens are needed to access it. This makes PyWormbase easy to use in scripts, too. First, import PyWormbase, then instantiate a PyWormbase object:
 
 ```Python
->>> import PyWormbase
->>> api = PyWormbase()
+>>> import pywormbase
+>>> api = pywormbase.WormbaseClient()
 ```
 
-In this example, `api` will have a variety of member functions that provide access to Wormbase API endpoints. You can use `dir(api)` to see all functions available (or read the associated documentation in `docs`).
+A `WormbaseClient` object will have a variety of member functions that provide access to Wormbase API endpoints. You can use `dir(api)` to see all functions available (or read the associated documentation in `docs`).
 
 ## Support
 If you use PyWormbase and are experiencing problems with the package, or if you have a request for an additional feature, please file an issue at https://github.com/c-anna/PyWormbase/issues.
