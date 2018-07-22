@@ -5,12 +5,13 @@ site_name: "PyWormbase"
 # is a tree of Python member names (modules, classes, etc.) that should be
 # documented. Higher indentation leads to smaller header size.
 generate:
-- baz/cool-stuff.md:
-  - foobar.baz:
-    - foobar.baz.CoolClass+     # (+ to include members)
-    - foobar.baz.some_function
-- baz/more-stuff.md:
-  - foobar.more++               # (++ to include members, and their members)
+- basics.md:
+  - pywormbase:
+    - pywormbase.wormbaseClient+     # (+ to include members)
+    - pywormbase.util+
+- endpoints.md:
+  - pywormbase.endpointGroups:
+    - pywormbase.endpointGroups.mapping+               # (++ to include members, and their members)
 
 # MkDocs pages configuration. The `<<` operator is sugar added by pydocmd
 # that allows you to use an external Markdown file (eg. your project's README)
@@ -18,16 +19,16 @@ generate:
 pages:
 - Home: index.md << ../README.md
 - foobar.baz:
-  - Cool Stuff: baz/cool-stuff.md
+  - Cool Stuff: basics.md
 
-# These options all show off their default values. You don't have to add
-# them to your configuration if you're fine with the default.
-docs_dir: sources
-gens_dir: _build/pydocmd     # This will end up as the MkDocs 'docs_dir'
-site_dir: _build/site
-theme:    readthedocs
-loader:   pydocmd.loader.PythonLoader
-preprocessor: pydocmd.preprocessor.Preprocessor
+# # These options all show off their default values. You don't have to add
+# # them to your configuration if you're fine with the default.
+# docs_dir: sources
+# gens_dir: _build/pydocmd     # This will end up as the MkDocs 'docs_dir'
+# site_dir: _build/site
+# theme:    readthedocs
+# loader:   pydocmd.loader.PythonLoader
+# preprocessor: pydocmd.preprocessor.Preprocessor
 
 # Additional search path for your Python module. If you use Pydocmd from a
 # subdirectory of your project (eg. docs/), you may want to add the parent

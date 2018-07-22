@@ -17,6 +17,8 @@ class WormbaseClient(
     Ontology,
     Overlap,
     Sequence):
+    """The main entry point to all Wormbase interactions"""
+    
     def __init__(self, version=None):
         self.version = str(version)
         self.version_string = 'rest-' + self.version if self.version else 'rest'
