@@ -19,8 +19,10 @@ def wormbase_get(endpoint, query=None):
         raise Exception("Wormbase GET returned with non-200 status code")
     
     response_json = response.json()
-    response_json.update({ 'status_code' : response.status_code })
-    return response_json
+    return {
+        'status_code': response.status_code,
+        'data': response_json
+    }
 
 def wormbase_post(endpoint, data=None, query=None):
     """Performs an HTTP POST request to the specified endpoint"""
@@ -35,5 +37,9 @@ def wormbase_post(endpoint, data=None, query=None):
         raise Exception("Wormbase POST returned with non-200 status code") 
 
     response_json = response.json()
-    response_json.update({ 'status_code' : response.status_code })
-    return response_json
+
+    return {
+        'status_code': response.status_code,
+        'data': response_json
+    }
+    
