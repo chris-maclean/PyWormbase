@@ -1,4 +1,4 @@
-from ..util import wormbase_get, wormbase_post
+from .util import wormbase_get, wormbase_post
 
 class LookupMixin:
     def lookup_by_id(self,

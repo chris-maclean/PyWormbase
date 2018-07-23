@@ -8,10 +8,18 @@ generate:
 - basics.md:
   - pywormbase:
     - pywormbase.wormbaseClient+     # (+ to include members)
-    - pywormbase.util+
+
 - endpoints.md:
   - pywormbase.endpointGroups:
-    - pywormbase.endpointGroups.mapping+               # (++ to include members, and their members)
+    - pywormbase.endpointGroups.mapping+++               # (++ to include members, and their members)
+    - pywormbase.endpointGroups.comparative_genomics++
+    - pywormbase.endpointGroups.cross_references++
+    - pywormbase.endpointGroups.information++
+    - pywormbase.endpointGroups.ontology++
+    - pywormbase.endpointGroups.overlap++
+    - pywormbase.endpointGroups.sequence++
+    - pywormbase.endpointGroups.util++
+
 
 # MkDocs pages configuration. The `<<` operator is sugar added by pydocmd
 # that allows you to use an external Markdown file (eg. your project's README)

@@ -1,4 +1,4 @@
-from ..util import wormbase_get, wormbase_post
+from .util import wormbase_get, wormbase_post
 
 class InformationMixin:
     def get_assemblies_for_species(self, species, bands=False):

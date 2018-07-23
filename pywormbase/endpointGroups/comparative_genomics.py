@@ -1,12 +1,39 @@
-from ..util import wormbase_get, wormbase_post
+from .util import wormbase_get, wormbase_post
 
 class ComparativeGenomicsMixin:
+    """A mixin with methods for accessing the Comparative Genomics section of the Wormbase REST API
+    
+    This mixin provides access to the following endpoints:
+
+    ```
+    GET /genetree/id/:id
+    GET /genetree/member/id/:id
+    GET /genetree/member/symbol/:species/:symbol
+    GET /homology/id/:id
+    GET /homology/symbol/:species/:symbol
+    ```
+    """
+    
     def get_gene_tree_dump(self, 
             id,
             aligned=False, 
             nh_format='simple', 
             sequence='protein'):
-            """http://parasite.wormbase.org/rest/documentation/info/genetree"""
+            """GET /genetree/id/:id
+
+            Parameters
+            ----------
+            id : str 
+                a genetree ID like _WBGT00000000021203_
+
+            Keyword arguments
+            -----------------
+            aligned : boolean
+                Returns the aligned string if true. Otherwise, return the original sequence (no insertions)
+                Default: False
+            
+            See http://parasite.wormbase.org/rest/documentation/info/genetree for more details
+            """
             
             params = {
                 'aligned': aligned,

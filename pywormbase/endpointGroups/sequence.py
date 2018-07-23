@@ -1,4 +1,4 @@
-from ..util import wormbase_get, wormbase_post
+from .util import wormbase_get, wormbase_post
 
 class SequenceMixin:
     def get_sequence(self,

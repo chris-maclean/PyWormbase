@@ -10,18 +10,11 @@
 WormbaseClient(self, version=None)
 ```
 The main entry point to all Wormbase interactions
-<h2 id="pywormbase.util">pywormbase.util</h2>
 
+This client inherits from mixins in the endpointGroups module. Those mixins hold the source code that retrieves data from the Wormbase REST API.
 
-<h3 id="pywormbase.util.wormbase_get">wormbase_get</h3>
+Parameters
+----------
+version : str or int
+          The desired REST API version number. This number will be included in the base URL when making calls to the API. Omit to use the latest version. Visit http://parasite.wormbase.org/rest/ to see the latest version.
 
-```python
-wormbase_get(endpoint, query=None)
-```
-Performs an HTTP GET request to the specified endpoint
-<h3 id="pywormbase.util.wormbase_post">wormbase_post</h3>
-
-```python
-wormbase_post(endpoint, data=None, query=None)
-```
-Performs an HTTP POST request to the specified endpoint

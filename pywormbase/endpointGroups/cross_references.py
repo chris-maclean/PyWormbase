@@ -1,4 +1,4 @@
-from ..util import wormbase_get, wormbase_post
+from .util import wormbase_get, wormbase_post
 
 class CrossReferencesMixin:
     def get_xrefs_for_symbol(self, 

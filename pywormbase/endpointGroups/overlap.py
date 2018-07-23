@@ -1,4 +1,4 @@
-from ..util import wormbase_get, wormbase_post
+from .util import wormbase_get, wormbase_post
 
 class OverlapMixin:
     def get_overlapping_features(self,
