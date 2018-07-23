@@ -34,7 +34,6 @@ class LookupMixin:
         return wormbase_get(self.version_string + '/lookup/genome/' + name, query=params)
 
 
-    # Deprecated by Wormbase? Returns 404
     def batch_lookup_by_id(self,
         ids,
         db_type=None,

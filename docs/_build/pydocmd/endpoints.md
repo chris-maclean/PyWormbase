@@ -41,13 +41,13 @@ ComparativeGenomicsMixin.get_gene_tree_dump(self, id, aligned=False, nh_format='
 ```
 GET /genetree/id/:id
 
-Parameters
-----------
-id : str
+__Parameters__
+
+- __id __: str
     a genetree ID like _WBGT00000000021203_
 
-Keyword arguments
------------------
+__Keyword Arguments__
+
 aligned : boolean
     Returns the aligned string if true. Otherwise, return the original sequence (no insertions)
     Default: False
@@ -102,9 +102,51 @@ http://parasite.wormbase.org/rest-10/documentation/info/homology_symbol
 wormbase_get(endpoint, query=None)
 ```
 Performs an HTTP GET request to the specified endpoint
+
+__Parameters__
+
+endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest-10/`) as well as the operation identifier(e.g., `/genetree/id/WBGT00000000021203`)
+
+__Arguments__
+
+- __query [dict] - a dictionary of querystring arguments that should be applied to the URL. Default__: `None`
+
+__Raises__
+
+Exception - if Wormbase replies with a non-200 status code
+
+__Returns__
+
+A dict with the following keys
+
+    status_code - the HTTP status code associated with the response
+    data - precisely what is returned by the Wormbase REST API
+
 <h3 id="pywormbase.endpointGroups.util.wormbase_post">wormbase_post</h3>
 
 ```python
 wormbase_post(endpoint, data=None, query=None)
 ```
 Performs an HTTP POST request to the specified endpoint
+
+__Parameters__
+
+endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest-10/`) as well as the operation identifier(e.g., `/lookup/id`)
+
+__Arguments__
+
+- __data [str] - a JSON-encoded string holding the payload for the POST request. Default__: `None`.
+
+- __query [dict] - a dictionary of querystring arguments that should be applied to the URL. Default__: `None`
+
+__Raises__
+
+Exception - if Wormbase replies with a non-200 status code
+
+__Returns__
+
+A dict with the following keys
+
+    status_code - the HTTP status code associated with the response
+    data - precisely what is returned by the Wormbase REST API
+

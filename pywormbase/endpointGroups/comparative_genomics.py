@@ -21,17 +21,15 @@ class ComparativeGenomicsMixin:
             sequence='protein'):
             """GET /genetree/id/:id
 
-            Parameters
-            ----------
+            # Parameters
             id : str 
                 a genetree ID like _WBGT00000000021203_
 
-            Keyword arguments
-            -----------------
+            # Keyword Arguments
             aligned : boolean
                 Returns the aligned string if true. Otherwise, return the original sequence (no insertions)
                 Default: False
-            
+
             See http://parasite.wormbase.org/rest/documentation/info/genetree for more details
             """
             
