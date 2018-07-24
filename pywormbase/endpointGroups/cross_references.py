@@ -46,4 +46,4 @@ class CrossReferencesMixin:
             'external_db': external_db
         }
 
-        return wormbase_get(self.verions_string + '/xrefs/name/' + species + '/' + gene_name, query=params)
+        return wormbase_get(self.version_string + '/xrefs/name/' + species + '/' + gene_name, query=params)

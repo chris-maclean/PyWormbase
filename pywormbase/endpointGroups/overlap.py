@@ -28,6 +28,7 @@ class OverlapMixin:
                 .format(feature, ALLOWED_FEATURES))
 
         params = {
+            'feature': feature,
             'biotype': biotype,
             'db_type': db_type,
             'logic_name': logic_name,
@@ -55,6 +56,7 @@ class OverlapMixin:
         """https://parasite.wormbase.org/rest/documentation/info/overlap_region"""
 
         params = {
+            'feature': feature,
             'biotype': biotype,
             'cell_type': cell_type,
             'db_type': db_type,

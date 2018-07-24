@@ -106,7 +106,7 @@ class ComparativeGenomicsMixin:
     def get_orthologues_by_gene(self,
         gene_id,
         aligned=True,
-        format='full',
+        response_format='full',
         sequence='protein',
         species=None,
         target_species=None,
@@ -116,7 +116,7 @@ class ComparativeGenomicsMixin:
 
         params = {
             'aligned': aligned,
-            'format': format,
+            'format': response_format,
             'sequence': sequence,
             'species': species,
             'target_species': target_species,
@@ -124,7 +124,7 @@ class ComparativeGenomicsMixin:
             'type': orthologue_type
         }
 
-        return wormbase_get(self.version_string + '/homology/id/' + id, query=params)
+        return wormbase_get(self.version_string + '/homology/id/' + gene_id, query=params)
 
     def get_orthologues_by_symbol(self,
         species,
