@@ -13,7 +13,7 @@ class SequenceMixin:
         object_type=None,
         species=None,
         sequence_type='genomic'):
-        """https://parasite.wormbase.org/rest-10/documentation/info/sequence_id"""
+        """https://parasite.wormbase.org/rest/documentation/info/sequence_id"""
 
         ALLOWED_FORMATS = ['fasta']
         if data_format and data_format not in ALLOWED_FORMATS:
@@ -61,7 +61,7 @@ class SequenceMixin:
         object_type=None,
         species=None,
         sequence_type='genomic'):
-        """https://parasite.wormbase.org/rest-10/documentation/info/sequence_id_post"""
+        """https://parasite.wormbase.org/rest/documentation/info/sequence_id_post"""
 
         id_list = []
         if not type(ids) is list:
@@ -94,7 +94,7 @@ class SequenceMixin:
         mask=None,
         mask_feature=False,
         data_format=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/sequence_region"""
+        """https://parasite.wormbase.org/rest/documentation/info/sequence_region"""
 
         ALLOWED_FORMATS = ['fasta']
         if data_format and data_format not in ALLOWED_FORMATS:
@@ -128,7 +128,7 @@ class SequenceMixin:
         expand_5prime=None,
         mask=None,
         mask_feature=False,):
-        """https://parasite.wormbase.org/rest-10/documentation/info/sequence_region_post"""
+        """https://parasite.wormbase.org/rest/documentation/info/sequence_region_post"""
 
         ALLOWED_FORMATS = ['fasta']
         if data_format and data_format not in ALLOWED_FORMATS:

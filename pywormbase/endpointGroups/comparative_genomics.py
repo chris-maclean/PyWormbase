@@ -19,18 +19,18 @@ class ComparativeGenomicsMixin:
             aligned=False, 
             nh_format='simple', 
             sequence='protein'):
-            """GET /genetree/id/:id
+            """`GET /genetree/id/:id`
+
+            http://parasite.wormbase.org/rest/documentation/info/genetree
 
             # Parameters
-            id : str 
-                a genetree ID like _WBGT00000000021203_
+            id (str) a genetree ID like _WBGT00000000021203_
 
-            # Keyword Arguments
-            aligned : boolean
-                Returns the aligned string if true. Otherwise, return the original sequence (no insertions)
-                Default: False
-
-            See http://parasite.wormbase.org/rest/documentation/info/genetree for more details
+            # Arguments
+            aligned (boolean) Default: False
+            nh_format (str) Default: 'simple'
+            sequence (str) Default: 'protein'
+            
             """
             
             params = {
@@ -49,7 +49,26 @@ class ComparativeGenomicsMixin:
         object_type=None, 
         sequence='protein', 
         species=None):
-        """http://parasite.wormbase.org/rest/documentation/info/genetree_member_id"""
+        """`GET /genetree/id/:id`
+
+        # Arguments
+        id (str): a genetree ID like 'WBGT00000000021203'
+        aligned (boolean): Default: False
+        db_type (str): Default: 'core'
+        nh_format (str): Default: 'simple'
+        object_type (str): Default: None
+        sequence (str): Default: 'protein'
+        species (str): Default: None
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_gene_tree_by_member('WBGT00000000021203')
+        ```
+
+        See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
+
+        """
 
         params = {
             'aligned': aligned,
@@ -71,7 +90,7 @@ class ComparativeGenomicsMixin:
         nh_format='simple',
         object_type=None,
         sequence='protein'):
-        """http://parasite.wormbase.org/rest-10/documentation/info/genetree_member_symbol"""
+        """http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol"""
         
         params = {
             'aligned': aligned,
@@ -93,7 +112,7 @@ class ComparativeGenomicsMixin:
         target_species=None,
         target_taxon=None,
         orthologue_type='all'):
-        """http://parasite.wormbase.org/rest-10/documentation/info/homology_ensemblgene"""
+        """http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene"""
 
         params = {
             'aligned': aligned,
@@ -117,7 +136,7 @@ class ComparativeGenomicsMixin:
         target_species=None,
         target_taxon=None,
         orthologue_type='all'):
-        """http://parasite.wormbase.org/rest-10/documentation/info/homology_symbol"""
+        """http://parasite.wormbase.org/rest/documentation/info/homology_symbol"""
 
         params = {
             'aligned': aligned,

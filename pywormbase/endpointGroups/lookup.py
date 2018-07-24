@@ -7,7 +7,7 @@ class LookupMixin:
         expand=False,
         format='full',
         species=None):
-        """http://parasite.wormbase.org/rest-10/documentation/info/lookup"""
+        """http://parasite.wormbase.org/rest/documentation/info/lookup"""
 
         params = {
             'db_type': db_type,
@@ -23,7 +23,7 @@ class LookupMixin:
         biotypes=None,
         level='gene',
         xrefs=None):
-        """http://parasite.wormbase.org/rest-10/documentation/info/lookup_genome"""
+        """http://parasite.wormbase.org/rest/documentation/info/lookup_genome"""
 
         params = {
             'biotypes': biotypes,
@@ -41,7 +41,7 @@ class LookupMixin:
         format='full',
         object_type=None,
         species=None):
-        """http://parasite.wormbase.org/rest-10/documentation/info/lookup_post"""
+        """http://parasite.wormbase.org/rest/documentation/info/lookup_post"""
 
         params = {
             'db_type': db_type,
@@ -64,7 +64,7 @@ class LookupMixin:
         symbol,
         expand=False,
         format='full'):
-        """http://parasite.wormbase.org/rest-10/documentation/info/symbol_lookup"""
+        """http://parasite.wormbase.org/rest/documentation/info/symbol_lookup"""
 
         params = {
             'expand': expand,
@@ -78,7 +78,7 @@ class LookupMixin:
         symbols,
         expand=False,
         format='full'):
-        """http://parasite.wormbase.org/rest-10/documentation/info/symbol_post"""
+        """http://parasite.wormbase.org/rest/documentation/info/symbol_post"""
 
         params = {
             'expand': expand,

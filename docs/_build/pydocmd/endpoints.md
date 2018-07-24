@@ -39,45 +39,65 @@ GET /homology/symbol/:species/:symbol
 ```python
 ComparativeGenomicsMixin.get_gene_tree_dump(self, id, aligned=False, nh_format='simple', sequence='protein')
 ```
-GET /genetree/id/:id
+`GET /genetree/id/:id`
+
+http://parasite.wormbase.org/rest/documentation/info/genetree
 
 __Parameters__
 
-- __id __: str
-    a genetree ID like _WBGT00000000021203_
+id (str) a genetree ID like _WBGT00000000021203_
 
-__Keyword Arguments__
+__Arguments__
 
-aligned : boolean
-    Returns the aligned string if true. Otherwise, return the original sequence (no insertions)
-    Default: False
+- __aligned (boolean) Default__: False
+- __nh_format (str) Default__: 'simple'
+- __sequence (str) Default__: 'protein'
 
-See http://parasite.wormbase.org/rest/documentation/info/genetree for more details
 
 <h4 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_gene_tree_by_member">get_gene_tree_by_member</h4>
 
 ```python
 ComparativeGenomicsMixin.get_gene_tree_by_member(self, id, aligned=False, db_type='core', nh_format='simple', object_type=None, sequence='protein', species=None)
 ```
-http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
+`GET /genetree/id/:id`
+
+__Arguments__
+
+- __id (str)__: a genetree ID like 'WBGT00000000021203'
+- __aligned (boolean)__: Default: False
+- __db_type (str)__: Default: 'core'
+- __nh_format (str)__: Default: 'simple'
+- __object_type (str)__: Default: None
+- __sequence (str)__: Default: 'protein'
+- __species (str)__: Default: None
+
+__Example__
+
+```python
+client.get_gene_tree_by_member('WBGT00000000021203')
+```
+
+See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
+
+
 <h4 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_gene_tree_with_gene">get_gene_tree_with_gene</h4>
 
 ```python
 ComparativeGenomicsMixin.get_gene_tree_with_gene(self, symbol, species, aligned=False, db_type='core', external_db=None, nh_format='simple', object_type=None, sequence='protein')
 ```
-http://parasite.wormbase.org/rest-10/documentation/info/genetree_member_symbol
+http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol
 <h4 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_orthologues_by_gene">get_orthologues_by_gene</h4>
 
 ```python
 ComparativeGenomicsMixin.get_orthologues_by_gene(self, gene_id, aligned=True, format='full', sequence='protein', species=None, target_species=None, target_taxon=None, orthologue_type='all')
 ```
-http://parasite.wormbase.org/rest-10/documentation/info/homology_ensemblgene
+http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene
 <h4 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_orthologues_by_symbol">get_orthologues_by_symbol</h4>
 
 ```python
 ComparativeGenomicsMixin.get_orthologues_by_symbol(self, species, symbol, aligned=True, external_db=None, format='full', sequence='protein', target_species=None, target_taxon=None, orthologue_type='all')
 ```
-http://parasite.wormbase.org/rest-10/documentation/info/homology_symbol
+http://parasite.wormbase.org/rest/documentation/info/homology_symbol
 <h2 id="pywormbase.endpointGroups.cross_references">pywormbase.endpointGroups.cross_references</h2>
 
 
@@ -105,7 +125,7 @@ Performs an HTTP GET request to the specified endpoint
 
 __Parameters__
 
-endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest-10/`) as well as the operation identifier(e.g., `/genetree/id/WBGT00000000021203`)
+endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest/`) as well as the operation identifier(e.g., `/genetree/id/WBGT00000000021203`)
 
 __Arguments__
 
@@ -131,7 +151,7 @@ Performs an HTTP POST request to the specified endpoint
 
 __Parameters__
 
-endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest-10/`) as well as the operation identifier(e.g., `/lookup/id`)
+endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest/`) as well as the operation identifier(e.g., `/lookup/id`)
 
 __Arguments__
 

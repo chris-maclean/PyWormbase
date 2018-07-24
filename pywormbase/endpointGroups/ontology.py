@@ -4,7 +4,7 @@ class OntologyMixin:
     def get_ancestry(self,
         id,
         ontology=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/ontology_ancestors"""
+        """https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors"""
 
         params = {
             'ontology': ontology
@@ -15,7 +15,7 @@ class OntologyMixin:
     def get_ancestry_chart(self,
         id,
         ontology=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/ontology_ancestors_chart"""
+        """https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart"""
 
         params = {
             'ontology': ontology
@@ -29,7 +29,7 @@ class OntologyMixin:
         ontology=None,
         subset=None,
         zero_distance=False):
-        """https://parasite.wormbase.org/rest-10/documentation/info/ontology_descendants"""
+        """https://parasite.wormbase.org/rest/documentation/info/ontology_descendants"""
 
         params = {
             'ontology': ontology,
@@ -44,7 +44,7 @@ class OntologyMixin:
         id,
         relation=False,
         simple=False,):
-        """https://parasite.wormbase.org/rest-10/documentation/info/ontology_id"""
+        """https://parasite.wormbase.org/rest/documentation/info/ontology_id"""
 
         params = {
             'relation': relation,
@@ -58,7 +58,7 @@ class OntologyMixin:
         ontology=None,
         relation=None,
         simple=False):
-        """https://parasite.wormbase.org/rest-10/documentation/info/ontology_name"""
+        """https://parasite.wormbase.org/rest/documentation/info/ontology_name"""
 
         params = {
             'ontology': ontology,

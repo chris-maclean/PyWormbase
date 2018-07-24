@@ -7,7 +7,7 @@ class CrossReferencesMixin:
         db_type=None, 
         external_db=None, 
         object_type=None):
-        """http://parasite.wormbase.org/rest-10/documentation/info/xref_external"""
+        """http://parasite.wormbase.org/rest/documentation/info/xref_external"""
         params = {
             'db_type': db_type,
             'external_db': external_db,
@@ -23,7 +23,7 @@ class CrossReferencesMixin:
         external_db=None, 
         object_type=None, 
         species=None):
-        """http://parasite.wormbase.org/rest-10/documentation/info/xref_id"""
+        """http://parasite.wormbase.org/rest/documentation/info/xref_id"""
         params = {
             'all_levels': all_levels,
             'db_type': db_type,
@@ -39,7 +39,7 @@ class CrossReferencesMixin:
         species,
         db_type='core',
         external_db=None):
-        """http://parasite.wormbase.org/rest-10/documentation/info/xref_name"""
+        """http://parasite.wormbase.org/rest/documentation/info/xref_name"""
 
         params = {
             'db_type': db_type,

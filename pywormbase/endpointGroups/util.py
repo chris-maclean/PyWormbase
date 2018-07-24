@@ -12,7 +12,7 @@ def wormbase_get(endpoint, query=None):
     """Performs an HTTP GET request to the specified endpoint
     
     # Parameters
-    endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest-10/`) as well as the operation identifier(e.g., `/genetree/id/WBGT00000000021203`)
+    endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest/`) as well as the operation identifier(e.g., `/genetree/id/WBGT00000000021203`)
 
     # Arguments
     query [dict] - a dictionary of querystring arguments that should be applied to the URL. Default: `None`
@@ -44,7 +44,7 @@ def wormbase_post(endpoint, data=None, query=None):
     """Performs an HTTP POST request to the specified endpoint
     
     # Parameters
-    endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest-10/`) as well as the operation identifier(e.g., `/lookup/id`)
+    endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest/`) as well as the operation identifier(e.g., `/lookup/id`)
 
     # Arguments
     data [str] - a JSON-encoded string holding the payload for the POST request. Default: `None`.

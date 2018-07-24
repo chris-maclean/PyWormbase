@@ -11,7 +11,7 @@ class OverlapMixin:
         object_type=None,
         species=None,
         species_set='mammals'):
-        """https://parasite.wormbase.org/rest-10/documentation/info/overlap_id"""
+        """https://parasite.wormbase.org/rest/documentation/info/overlap_id"""
 
         ALLOWED_FEATURES = [
             'gene',
@@ -52,7 +52,7 @@ class OverlapMixin:
         species_set='mammals',
         trim_downstream=False,
         trim_upstream=False):
-        """https://parasite.wormbase.org/rest-10/documentation/info/overlap_region"""
+        """https://parasite.wormbase.org/rest/documentation/info/overlap_region"""
 
         params = {
             'biotype': biotype,
@@ -74,7 +74,7 @@ class OverlapMixin:
         feature='protein_feature',
         species=None,
         data_type=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/overlap_translation"""
+        """https://parasite.wormbase.org/rest/documentation/info/overlap_translation"""
 
 
         ALLOWED_FEATURES = [

@@ -18,7 +18,7 @@ class MappingMixin:
         object_type,
         region,
         species=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/assembly_cdna"""
+        """https://parasite.wormbase.org/rest/documentation/info/assembly_cdna"""
 
         params = {
             'object_type': object_type,
@@ -32,7 +32,7 @@ class MappingMixin:
         object_type,
         region,
         species=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/assembly_cds"""
+        """https://parasite.wormbase.org/rest/documentation/info/assembly_cds"""
         
         params = {
             'object_type': object_type,
@@ -46,7 +46,7 @@ class MappingMixin:
         region,
         object_type=None,
         species=None):
-        """https://parasite.wormbase.org/rest-10/documentation/info/assembly_translation"""
+        """https://parasite.wormbase.org/rest/documentation/info/assembly_translation"""
         
         params = {
             'object_type': object_type,
