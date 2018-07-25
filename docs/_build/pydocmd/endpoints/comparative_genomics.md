@@ -46,7 +46,8 @@ __Returns__
 
 `data (dict)`: a dictionary with the data returned by the API
 
-`See also`: http://parasite.wormbase.org/rest/documentation/info/genetree
+__See also: http://parasite.wormbase.org/rest/documentation/info/genetree__
+
 
 
 <h3 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_gene_tree_by_member">get_gene_tree_by_member</h3>
@@ -77,7 +78,8 @@ __Returns__
 
 `data (dict)`: a dictionary with the data returned by the API
 
-`See also`: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
+__See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id__
+
 
 
 <h3 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_gene_tree_with_gene">get_gene_tree_with_gene</h3>
@@ -109,7 +111,8 @@ __Returns__
 
 `data (dict)`: a dictionary with the data returned by the API
 
-`See also`: http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol
+__See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol__
+
 
 
 <h3 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_orthologues_by_gene">get_orthologues_by_gene</h3>
@@ -141,7 +144,8 @@ __Returns__
 
 `data (dict)`: a dictionary with the data returned by the API
 
-`See also`: http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene
+__See also: http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene__
+
 
 
 <h3 id="pywormbase.endpointGroups.comparative_genomics.ComparativeGenomicsMixin.get_orthologues_by_symbol">get_orthologues_by_symbol</h3>
@@ -179,6 +183,7 @@ __Returns__
 `data (dict)`: a dictionary with the data returned by the API
 
 
-`See also`: http://parasite.wormbase.org/rest/documentation/info/homology_symbol
+__See also: http://parasite.wormbase.org/rest/documentation/info/homology_symbol__
+
 
 

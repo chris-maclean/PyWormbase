@@ -34,7 +34,7 @@ class OntologyMixin:
         # Returns
         data (list): a list of dictionaries describing the ancestors of the given gene
         
-        See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors
+        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors
         
         """
 
@@ -62,7 +62,7 @@ class OntologyMixin:
         # Returns
         data (dict): a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
         
-        See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
         
        """
 
@@ -93,7 +93,7 @@ class OntologyMixin:
         # Returns
         data (dict): a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
         
-        See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
         
        """
 

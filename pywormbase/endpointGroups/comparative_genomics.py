@@ -18,38 +18,38 @@ class ComparativeGenomicsMixin:
     """
     
     def get_gene_tree_dump(self, 
-            id,
-            aligned=False, 
-            nh_format='simple', 
-            sequence='protein'):
-            """`GET /genetree/id/:id`
+        id,
+        aligned=False, 
+        nh_format='simple', 
+        sequence='protein'):
+        """`GET /genetree/id/:id`
 
-            # Arguments
-            id* (str): a genetree ID like 'WBGT00000000021203'
-            aligned (boolean): Default: False
-            nh_format (str): Default: 'simple'
-            sequence (str): Default: 'protein'
+        # Arguments
+        id* (str): a genetree ID like 'WBGT00000000021203'
+        aligned (boolean): Default: False
+        nh_format (str): Default: 'simple'
+        sequence (str): Default: 'protein'
 
-            # Example
-            ```python
-            client = pywormbase.WormbaseClient()
-            client.get_gene_tree_dump('WBGT00000000021203')
-            ```
-            
-            # Returns
-            data (dict): a dictionary with the data returned by the API
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_gene_tree_dump('WBGT00000000021203')
+        ```
+        
+        # Returns
+        data (dict): a dictionary with the data returned by the API
 
-            See also: http://parasite.wormbase.org/rest/documentation/info/genetree
+        # See also: http://parasite.wormbase.org/rest/documentation/info/genetree
 
-            """
-            
-            params = {
-                'aligned': aligned,
-                'nh_format': nh_format,
-                'sequence': sequence
-            }
+        """
+        
+        params = {
+            'aligned': aligned,
+            'nh_format': nh_format,
+            'sequence': sequence
+        }
 
-            return wormbase_get(self.version_string + '/genetree/id/' + id, query=params)
+        return wormbase_get(self.version_string + '/genetree/id/' + id, query=params)
 
     def get_gene_tree_by_member(self, 
         id, 
@@ -79,7 +79,7 @@ class ComparativeGenomicsMixin:
         # Returns
         data (dict): a dictionary with the data returned by the API
 
-        See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
+        # See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
 
         """
 
@@ -124,7 +124,7 @@ class ComparativeGenomicsMixin:
         # Returns
         data (dict): a dictionary with the data returned by the API
         
-        See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol
+        # See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol
         
         """
         
@@ -169,7 +169,7 @@ class ComparativeGenomicsMixin:
         # Returns
         data (dict): a dictionary with the data returned by the API
         
-        See also: http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene
+        # See also: http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene
         
         """
 
@@ -221,7 +221,7 @@ class ComparativeGenomicsMixin:
         data (dict): a dictionary with the data returned by the API
         
         
-        See also: http://parasite.wormbase.org/rest/documentation/info/homology_symbol
+        # See also: http://parasite.wormbase.org/rest/documentation/info/homology_symbol
         
         """
 

@@ -44,7 +44,8 @@ __Returns__
 
 `data (list)`: a list of dictionaries describing the ancestors of the given gene
 
-`See also`: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors
+__See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors__
+
 
 
 <h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_ancestry_chart">get_ancestry_chart</h3>
@@ -70,7 +71,8 @@ __Returns__
 
 `data (dict)`: a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
 
-`See also`: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+__See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart__
+
 
 
 <h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_descendants">get_descendants</h3>
@@ -96,7 +98,8 @@ __Returns__
 
 `data (dict)`: a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
 
-`See also`: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+__See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart__
+
 
 
 <h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_ontology_by_id">get_ontology_by_id</h3>
