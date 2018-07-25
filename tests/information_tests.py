@@ -10,7 +10,6 @@ class TestInformationMethods(unittest.TestCase):
     
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
 
     def test_release_info(self):
         self.doTest(self.api.get_release_info())

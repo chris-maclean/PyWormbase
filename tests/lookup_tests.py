@@ -10,7 +10,6 @@ class TestLookupMethods(unittest.TestCase):
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
 
     def test_batch_symbol(self):
         symbols = ["Bm994", "__VAR(gene_symbol2)__" ]

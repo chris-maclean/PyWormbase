@@ -1,10 +1,42 @@
 from .util import wormbase_get, wormbase_post
 
 class OntologyMixin:
+    """A mixin with methods for accessing the Ontology section of the Wormbase ParaSite REST API
+    
+    This mixin provides access to the following endpoints:
+
+    ```
+    GET /ontology/ancestors/:id
+    GET /ontology/ancestors/chart/:id
+    GET /ontology/descendants/:id
+    GET /ontology/id/:id
+    GET /ontology/name/:name
+    ```
+
+    Any arguments listed with a `*` are required
+
+    """
     def get_ancestry(self,
         id,
         ontology=None):
-        """https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors"""
+        """`GET ontology/ancestors/:id`
+
+        # Arguments
+        id* (str): an ontology term identifier
+        ontology (str): Default: None
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_ancestry('GO:0005667')
+        ```
+
+        # Returns
+        data (list): a list of dictionaries describing the ancestors of the given gene
+        
+        See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors
+        
+        """
 
         params = {
             'ontology': ontology
@@ -15,7 +47,24 @@ class OntologyMixin:
     def get_ancestry_chart(self,
         id,
         ontology=None):
-        """https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart"""
+        """`GET /ontology/ancestors/chart/:id`
+        
+        # Arguments
+        id* (str): an ontology term identifier
+        ontology (str): Default: None
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_ancestry_chart('GO:0005667')
+        ```
+
+        # Returns
+        data (dict): a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
+        
+        See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+        
+       """
 
         params = {
             'ontology': ontology
@@ -29,7 +78,24 @@ class OntologyMixin:
         ontology=None,
         subset=None,
         zero_distance=False):
-        """https://parasite.wormbase.org/rest/documentation/info/ontology_descendants"""
+        """`GET /ontology/descendants/:id`
+        
+        # Arguments
+        id* (str): an ontology term identifier
+        ontology (str): Default: None
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_ancestry_chart('GO:0005667')
+        ```
+
+        # Returns
+        data (dict): a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
+        
+        See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+        
+       """
 
         params = {
             'ontology': ontology,

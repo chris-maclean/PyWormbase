@@ -10,7 +10,6 @@ class TestCrossReferenceMethods(unittest.TestCase):
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
 
     def test_xrefs_for_symbol(self):
         self.doTest(self.api.get_xrefs_for_symbol(

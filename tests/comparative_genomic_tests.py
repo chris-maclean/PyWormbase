@@ -10,7 +10,6 @@ class TestComparativeMethods(unittest.TestCase):
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
 
     def test_gene_tree_dump(self):
         self.doTest(self.api.get_gene_tree_dump('WBGT00000000021203'))
