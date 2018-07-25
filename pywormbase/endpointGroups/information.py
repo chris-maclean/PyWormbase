@@ -20,6 +20,7 @@ class InformationMixin:
     Any arguments listed with a `*` are required
 
     """
+    
     def get_assemblies_for_species(self, species, bands=False):
         """`GET /info/assembly/:species`
         

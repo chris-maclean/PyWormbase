@@ -203,7 +203,7 @@ class ComparativeGenomicsMixin:
         aligned (boolean): Default: True
         external_db (str): Default: None
         response_format (str): Must be one of ['full', 'condensed'] Default: 'full'
-        sequence (str): Must be one of ['none', 'cdna', 'proteint'] Default: 'protein'
+        sequence (str): Must be one of ['none', 'cdna', 'protein'] Default: 'protein'
         target_species (str): Default: None
         target_taxon (int): Default: None
         orthologue_type (str): Must be one of ['orthologues', 'paralogues', 'projections', 'all'] Default: 'all'
@@ -225,8 +225,23 @@ class ComparativeGenomicsMixin:
         
         """
 
+        ALLOWED_FORMATS = ['full', 'condensed']
+        if response_format and response_format not in ALLOWED_FORMATS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(response_format, ALLOWED_FORMATS))
+
+        ALLOWED_SEQS = ['none', 'cdna', 'protein']
+        if sequence and sequence not in ALLOWED_SEQS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(sequence, ALLOWED_FORMATS))
+
+        ALLOWED_ORTHOS = ['orthologues', 'paralogues', 'projections', 'all']
+        if orthologue_type and orthologue_type not in ALLOWED_ORTHOS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(orthologue_type, ALLOWED_FORMATS))
+
         params = {
-            'aligned': aligned,
+            'aligned': int(aligned),
             'external_db': external_db,
             'format': response_format,
             'sequence': sequence,
