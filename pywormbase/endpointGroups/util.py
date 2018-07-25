@@ -10,21 +10,20 @@ HEADERS = {
 
 def wormbase_get(endpoint, query=None):
     """Performs an HTTP GET request to the specified endpoint
+
+    This method is not for use outside of the #endpointGroups module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
     
     # Parameters
-    endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest/`) as well as the operation identifier(e.g., `/genetree/id/WBGT00000000021203`)
+    endpoint (str): the full endpoint that will be called. Should include the base URL (e.g., `https://parasite.wormbase.org/`), the version identifier(e.g., `/rest/`) as well as the endpoint (e.g., `/genetree/id/WBGT00000000021203`).
 
     # Arguments
-    query [dict] - a dictionary of querystring arguments that should be applied to the URL. Default: `None`
+    query (dict): a dictionary of querystring arguments that should be applied to the URL. Default: `None`
 
     # Raises
-    Exception - if Wormbase replies with a non-200 status code
+    Exception: If Wormbase replies with a non-200 status code
 
     # Returns
-    A dict with the following keys 
-    
-        status_code - the HTTP status code associated with the response
-        data - precisely what is returned by the Wormbase REST API
+    A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
     """
     
     response = get('/'.join([BASE_URL, endpoint]), 
@@ -34,31 +33,25 @@ def wormbase_get(endpoint, query=None):
     if not (200 <= response.status_code < 300):
         raise Exception("Wormbase GET returned with non-200 status code")
     
-    response_json = response.json()
-    return {
-        'status_code': response.status_code,
-        'data': response_json
-    }
+    return response.json()
 
 def wormbase_post(endpoint, data=None, query=None):
     """Performs an HTTP POST request to the specified endpoint
+
+    This method is not for use outside of the #endpointGroups module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
     
     # Parameters
-    endpoint [str] - the full endpoint that will be called. Should include the version identifier(e.g., `/rest/`) as well as the operation identifier(e.g., `/lookup/id`)
+    endpoint (str): the full endpoint that will be called. Should include the base URL (e.g., `https://parasite.wormbase.org/`), version identifier (e.g., `/rest/`) as well as the endpoint (e.g., `/lookup/id`)
 
     # Arguments
-    data [str] - a JSON-encoded string holding the payload for the POST request. Default: `None`.
-
-    query [dict] - a dictionary of querystring arguments that should be applied to the URL. Default: `None`
+    data (str): a JSON-encoded string holding the payload for the POST request. Default: `None`.
+    query (dict): a dictionary of querystring arguments that should be applied to the URL. Default: `None`
 
     # Raises
-    Exception - if Wormbase replies with a non-200 status code
+    Exception: If Wormbase replies with a non-200 status code
 
     # Returns
-    A dict with the following keys 
-    
-        status_code - the HTTP status code associated with the response
-        data - precisely what is returned by the Wormbase REST API
+    A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
     """
 
     response = post('/'.join([BASE_URL, endpoint]),
@@ -70,10 +63,4 @@ def wormbase_post(endpoint, data=None, query=None):
         print(response)
         raise Exception("Wormbase POST returned with non-200 status code") 
 
-    response_json = response.json()
-
-    return {
-        'status_code': response.status_code,
-        'data': response_json
-    }
-    
+    return response.json()

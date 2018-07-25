@@ -8,6 +8,8 @@ requests = "*"
 
 [dev-packages]
 pydoc-markdown = "*"
+pylint = "*"
+rope = "*"
 
 [requires]
 python_version = "3.6"

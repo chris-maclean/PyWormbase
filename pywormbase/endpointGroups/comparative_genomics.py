@@ -1,7 +1,7 @@
 from .util import wormbase_get, wormbase_post
 
 class ComparativeGenomicsMixin:
-    """A mixin with methods for accessing the Comparative Genomics section of the Wormbase REST API
+    """A mixin with methods for accessing the Comparative Genomics section of the Wormbase ParaSite REST API
     
     This mixin provides access to the following endpoints:
 
@@ -12,6 +12,9 @@ class ComparativeGenomicsMixin:
     GET /homology/id/:id
     GET /homology/symbol/:species/:symbol
     ```
+
+    Any arguments listed with a `*` are required
+
     """
     
     def get_gene_tree_dump(self, 
@@ -21,16 +24,23 @@ class ComparativeGenomicsMixin:
             sequence='protein'):
             """`GET /genetree/id/:id`
 
-            http://parasite.wormbase.org/rest/documentation/info/genetree
-
-            # Parameters
-            id (str) a genetree ID like _WBGT00000000021203_
-
             # Arguments
-            aligned (boolean) Default: False
-            nh_format (str) Default: 'simple'
-            sequence (str) Default: 'protein'
+            id* (str): a genetree ID like 'WBGT00000000021203'
+            aligned (boolean): Default: False
+            nh_format (str): Default: 'simple'
+            sequence (str): Default: 'protein'
+
+            # Example
+            ```python
+            client = pywormbase.WormbaseClient()
+            client.get_gene_tree_dump('WBGT00000000021203')
+            ```
             
+            # Returns
+            data (dict): a dictionary with the data returned by the API
+
+            See also: http://parasite.wormbase.org/rest/documentation/info/genetree
+
             """
             
             params = {
@@ -52,7 +62,7 @@ class ComparativeGenomicsMixin:
         """`GET /genetree/id/:id`
 
         # Arguments
-        id (str): a genetree ID like 'WBGT00000000021203'
+        id* (str): a genetree ID like 'WBGT00000000021203'
         aligned (boolean): Default: False
         db_type (str): Default: 'core'
         nh_format (str): Default: 'simple'
@@ -65,6 +75,9 @@ class ComparativeGenomicsMixin:
         client = pywormbase.WormbaseClient()
         client.get_gene_tree_by_member('WBGT00000000021203')
         ```
+
+        # Returns
+        data (dict): a dictionary with the data returned by the API
 
         See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_id
 
@@ -90,7 +103,30 @@ class ComparativeGenomicsMixin:
         nh_format='simple',
         object_type=None,
         sequence='protein'):
-        """http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol"""
+        """`GET genetree/member/symbol/:species/:symbol` 
+        
+        # Arguments
+        symbol* (str): Symbol or display name of a gene
+        species* (str): species name/alias
+        aligned (boolean): Default: False
+        db_type (str): Default: 'core'
+        external_db (str): Default: None
+        nh_format (str): Default: 'simple'
+        object_type (str): Default: None
+        sequence (str): Default: 'protein'
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_gene_tree_with_gene('Bm994', 'brugia_malayi_prjna10729')
+        ```
+
+        # Returns
+        data (dict): a dictionary with the data returned by the API
+        
+        See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol
+        
+        """
         
         params = {
             'aligned': aligned,
@@ -112,7 +148,30 @@ class ComparativeGenomicsMixin:
         target_species=None,
         target_taxon=None,
         orthologue_type='all'):
-        """http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene"""
+        """`GET homology/id/:id` 
+        
+        # Arguments
+        gene_id* (str): A stable ID
+        aligned (boolean): Default: True
+        response_format (str): Must be one of ['full', 'condensed'] Default: 'full'
+        sequence (str): Must be one of ['none', 'cdna', 'proteint'] Default: 'protein'
+        species (str): Default: None
+        target_species (str): Default: None
+        target_taxon (int): Default: None
+        orthologue_type (str): Must be one of ['orthologues', 'paralogues', 'projections', 'all'] Default: 'all'
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_orthologues_by_gene('WBGene00221255')
+        ```
+
+        # Returns
+        data (dict): a dictionary with the data returned by the API
+        
+        See also: http://parasite.wormbase.org/rest/documentation/info/homology_ensemblgene
+        
+        """
 
         params = {
             'aligned': aligned,
@@ -131,17 +190,45 @@ class ComparativeGenomicsMixin:
         symbol,
         aligned=True,
         external_db=None,
-        format='full',
+        response_format='full',
         sequence='protein',
         target_species=None,
         target_taxon=None,
         orthologue_type='all'):
-        """http://parasite.wormbase.org/rest/documentation/info/homology_symbol"""
+        """`GET homology/symbol/:species/:symbol`
+
+        # Arguments
+        species* (str): Species name/alias
+        symbol* (str): Symbol or display name of a gene
+        aligned (boolean): Default: True
+        external_db (str): Default: None
+        response_format (str): Must be one of ['full', 'condensed'] Default: 'full'
+        sequence (str): Must be one of ['none', 'cdna', 'proteint'] Default: 'protein'
+        target_species (str): Default: None
+        target_taxon (int): Default: None
+        orthologue_type (str): Must be one of ['orthologues', 'paralogues', 'projections', 'all'] Default: 'all'
+
+        # Raises
+        Exception: If an invalid value is provided for one of the restricted keyword arguments
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_orthologues_by_gene('brugia_malayi_prjna10729', 'Bm994')
+        ```
+
+        # Returns
+        data (dict): a dictionary with the data returned by the API
+        
+        
+        See also: http://parasite.wormbase.org/rest/documentation/info/homology_symbol
+        
+        """
 
         params = {
             'aligned': aligned,
             'external_db': external_db,
-            'format': format,
+            'format': response_format,
             'sequence': sequence,
             'target_species': target_species,
             'target_taxon': target_taxon,
