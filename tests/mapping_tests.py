@@ -10,7 +10,6 @@ class TestMappingMethods(unittest.TestCase):
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
 
     def test_cdna2genomic(self):
         self.doTest(self.api.cdna2genomic('Bm4789', 'transcript', '100..300'))

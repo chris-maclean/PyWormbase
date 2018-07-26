@@ -5,11 +5,13 @@ name = "pypi"
 
 [packages]
 requests = "*"
+"urllib3" = "*"
 
 [dev-packages]
 pydoc-markdown = "*"
 pylint = "*"
 rope = "*"
+"autopep8" = "*"
 
 [requires]
 python_version = "3.6"

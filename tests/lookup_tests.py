@@ -10,7 +10,6 @@ class TestLookupMethods(unittest.TestCase):
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
 
     def test_batch_symbol(self):
         symbols = ["Bm994", "__VAR(gene_symbol2)__" ]
@@ -24,7 +23,7 @@ class TestLookupMethods(unittest.TestCase):
         self.doTest(self.api.lookup_by_id('WBGene00221255'))
 
     def test_lookup_by_name(self):
-        self.doTest(self.api.lookup_by_name('brugia_malayi_prjna10729'))
+        self.assertTrue(type(self.api.lookup_by_name('brugia_malayi_prjna10729')) is list)
 
     def test_lookup_symbol_external_db(self):
         self.doTest(self.api.get_symbol_from_external_db('brugia_malayi_prjna10729', 'Bm994'))

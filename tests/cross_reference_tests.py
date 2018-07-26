@@ -9,8 +9,7 @@ class TestCrossReferenceMethods(unittest.TestCase):
         self.api = WormbaseClient(10)
 
     def doTest(self, response):
-        self.assertTrue(test_util.is_dict(response))
-        self.assertTrue(test_util.is_status_200(response))
+        self.assertTrue(type(response) is list)
 
     def test_xrefs_for_symbol(self):
         self.doTest(self.api.get_xrefs_for_symbol(

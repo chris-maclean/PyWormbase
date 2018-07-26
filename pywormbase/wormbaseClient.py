@@ -36,7 +36,7 @@ class WormbaseClient(
     {'status_code': 200, 'data': {'wbps_release': '9', 'wb_release': '258'}}
     ```
 
-    See also: http://parasite.wormbase.org/rest/
+    # See also: http://parasite.wormbase.org/rest/
     """
     
     def __init__(self, version=None):

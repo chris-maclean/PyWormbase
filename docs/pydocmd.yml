@@ -9,16 +9,22 @@ generate:
   - pywormbase:
     - pywormbase.wormbaseClient++     # (+ to include members)
 
-- endpoints.md:
-  - pywormbase.endpointGroups:
-    - pywormbase.endpointGroups.comparative_genomics++
-    - pywormbase.endpointGroups.cross_references++
-    - pywormbase.endpointGroups.information++
-    - pywormbase.endpointGroups.lookup++
-    - pywormbase.endpointGroups.mapping++
-    - pywormbase.endpointGroups.ontology++
-    - pywormbase.endpointGroups.overlap++
-    - pywormbase.endpointGroups.sequence++
+- endpoints/comparative_genomics.md:
+  - pywormbase.endpointGroups.comparative_genomics++
+- endpoints/cross_references.md:
+  - pywormbase.endpointGroups.cross_references++
+- endpoints/information.md:
+  - pywormbase.endpointGroups.information++
+- endpoints/lookup.md:
+  - pywormbase.endpointGroups.lookup++
+- endpoints/mapping.md:
+  - pywormbase.endpointGroups.mapping++
+- endpoints/ontology.md:
+  - pywormbase.endpointGroups.ontology++
+- endpoints/overlap.md:
+  - pywormbase.endpointGroups.overlap++
+- endpoints/sequence.md:
+  - pywormbase.endpointGroups.sequence++
 
 
 - util.md:
