@@ -32,7 +32,7 @@ __Arguments__
 
 - __id* (str)__: a genetree ID like 'WBGT00000000021203'
 - __aligned (boolean)__: Default: False
-- __nh_format (str)__: Default: 'simple'
+- __nh_format (str)__: Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
 - __sequence (str)__: Default: 'protein'
 
 __Example__
@@ -62,7 +62,7 @@ __Arguments__
 - __id* (str)__: a genetree ID like 'WBGT00000000021203'
 - __aligned (boolean)__: Default: False
 - __db_type (str)__: Default: 'core'
-- __nh_format (str)__: Default: 'simple'
+- __nh_format (str)__: Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
 - __object_type (str)__: Default: None
 - __sequence (str)__: Default: 'protein'
 - __species (str)__: Default: None
@@ -96,7 +96,7 @@ __Arguments__
 - __aligned (boolean)__: Default: False
 - __db_type (str)__: Default: 'core'
 - __external_db (str)__: Default: None
-- __nh_format (str)__: Default: 'simple'
+- __nh_format (str)__: Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
 - __object_type (str)__: Default: None
 - __sequence (str)__: Default: 'protein'
 
@@ -140,6 +140,10 @@ client = pywormbase.WormbaseClient()
 client.get_orthologues_by_gene('WBGene00221255')
 ```
 
+__Raises__
+
+- `Exception`: If an invalid value is provided for `response_format`, `sequence`, or `orthologue_type`
+
 __Returns__
 
 `data (dict)`: a dictionary with the data returned by the API
@@ -162,7 +166,7 @@ __Arguments__
 - __aligned (boolean)__: Default: True
 - __external_db (str)__: Default: None
 - __response_format (str)__: Must be one of ['full', 'condensed'] Default: 'full'
-- __sequence (str)__: Must be one of ['none', 'cdna', 'proteint'] Default: 'protein'
+- __sequence (str)__: Must be one of ['none', 'cdna', 'protein'] Default: 'protein'
 - __target_species (str)__: Default: None
 - __target_taxon (int)__: Default: None
 - __orthologue_type (str)__: Must be one of ['orthologues', 'paralogues', 'projections', 'all'] Default: 'all'
@@ -177,6 +181,10 @@ __Example__
 client = pywormbase.WormbaseClient()
 client.get_orthologues_by_gene('brugia_malayi_prjna10729', 'Bm994')
 ```
+
+__Raises__
+
+- `Exception`: If an invalid value is provided for `response_format`, `sequence`, or `orthologue_type`
 
 __Returns__
 

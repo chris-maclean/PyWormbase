@@ -16,6 +16,7 @@ class LookupMixin:
     Any arguments listed with a `*` are required
 
     """
+    
     def lookup_by_id(self,
         id,
         db_type=None,

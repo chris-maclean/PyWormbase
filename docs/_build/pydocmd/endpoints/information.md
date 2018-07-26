@@ -6,6 +6,24 @@
 ```python
 InformationMixin(self, /, *args, **kwargs)
 ```
+A mixin with methods for accessing the Information section of the Wormbase ParaSite REST API
+
+This mixin provides access to the following endpoints:
+
+```
+GET /info/assembly/:species
+GET /info/assembly/:species/:region_name
+GET /info/genomes/:name
+GET /info/genomes
+GET /info/genomes/assembly/:assembly_id
+GET /info/genomes/taxonomy/:taxon_name
+GET /info/quality/:genome_name
+GET /info/version
+GET /info/species
+```
+
+Any arguments listed with a `*` are required
+
 
 <h3 id="pywormbase.endpointGroups.information.InformationMixin.get_assemblies_for_species">get_assemblies_for_species</h3>
 
@@ -199,7 +217,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_qualit
 ```python
 InformationMixin.get_release_info(self)
 ```
-`GET /info/version/`
+`GET /info/version`
 
 This function takes no arguments, but its response is determined by the API version number specified during initialization of the `WormbaseClient` object.
 
@@ -223,7 +241,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_wormba
 ```python
 InformationMixin.get_available_species(self)
 ```
-`GET /info/species/`
+`GET /info/species`
 
 __Example__
 

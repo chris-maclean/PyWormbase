@@ -1,6 +1,8 @@
 from requests import get, post
+import urllib
 import json
 import logging
+
 
 BASE_URL = 'http://parasite.wormbase.org'
 HEADERS = {
@@ -25,8 +27,10 @@ def wormbase_get(endpoint, query=None):
     # Returns
     A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
     """
+
+    encoded_endpoint = urllib.parse.quote(endpoint)
     
-    response = get('/'.join([BASE_URL, endpoint]), 
+    response = get('/'.join([BASE_URL, encoded_endpoint]),
         params=query,
         headers=HEADERS)
 
@@ -54,7 +58,9 @@ def wormbase_post(endpoint, data=None, query=None):
     A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
     """
 
-    response = post('/'.join([BASE_URL, endpoint]),
+    encoded_endpoint = urllib.parse.quote(endpoint)
+
+    response = post('/'.join([BASE_URL, encoded_endpoint]),
         params=query,
         data=json.dumps(data),
         headers=HEADERS)

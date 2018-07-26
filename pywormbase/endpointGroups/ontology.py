@@ -82,26 +82,29 @@ class OntologyMixin:
         
         # Arguments
         id* (str): an ontology term identifier
+        closest_term (boolean): Default: False
         ontology (str): Default: None
+        subset (str): Default: None
+        zero_distance (boolean): Default: False
 
         # Example
         ```python
         client = pywormbase.WormbaseClient()
-        client.get_ancestry_chart('GO:0005667')
+        client.get_descendants('GO:0005667')
         ```
 
         # Returns
-        data (dict): a list of dictionaries reconstructing the entire ancestry of a term from is_a and part_of relationships the ancestors of the given gene
+        data (list): a list of dictionaries representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ancestors_chart
+        # See also: https://parasite.wormbase.org/rest-10/documentation/info/ontology_descendants
         
        """
 
         params = {
             'ontology': ontology,
-            'closest_term': closest_term,
+            'closest_term': int(closest_term),
             'subset': subset,
-            'zero_distance': zero_distance
+            'zero_distance': int(zero_distance)
         }
 
         return wormbase_get(self.version_string + '/ontology/descendants/' + id, query=params)
@@ -109,12 +112,30 @@ class OntologyMixin:
     def get_ontology_by_id(self,
         id,
         relation=False,
-        simple=False,):
-        """https://parasite.wormbase.org/rest/documentation/info/ontology_id"""
+        simple=False):
+        """`GET ontology/id/:id`
+        
+        # Arguments
+        id* (str): an ontology term identifier
+        relation (str): Default: None
+        simple (boolean): Default: False
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_ontology_by_id('GO:0005667')
+        ```
+
+        # Returns
+        data (dict): a dictionary representing the data returned by the API
+        
+        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_id
+         
+        """
 
         params = {
             'relation': relation,
-            'simple': simple
+            'simple': int(simple)
         }
 
         return wormbase_get(self.version_string + '/ontology/id/' + id, query=params)
@@ -124,12 +145,31 @@ class OntologyMixin:
         ontology=None,
         relation=None,
         simple=False):
-        """https://parasite.wormbase.org/rest/documentation/info/ontology_name"""
+        """`GET ontology/id/:id`
+        
+        # Arguments
+        name* (str): an ontology name. SQL wildcards are supported
+        ontology (str): Default: None
+        relation (str): Default: None
+        simple (boolean): Default: False
+
+        # Example
+        ```python
+        client = pywormbase.WormbaseClient()
+        client.get_ontology_by_name('transcription factor complex')
+        ```
+
+        # Returns
+        data (dict): a dictionary representing the data returned by the API
+        
+        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_name
+         
+        """
 
         params = {
             'ontology': ontology,
             'relation': relation,
-            'simple': simple
+            'simple': int(simple)
         }
 
         return wormbase_get(self.version_string + '/ontology/name/' + name, query=params)

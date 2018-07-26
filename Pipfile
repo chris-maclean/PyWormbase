@@ -5,6 +5,7 @@ name = "pypi"
 
 [packages]
 requests = "*"
+"urllib3" = "*"
 
 [dev-packages]
 pydoc-markdown = "*"

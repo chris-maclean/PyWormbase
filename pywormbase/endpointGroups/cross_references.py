@@ -14,6 +14,7 @@ class CrossReferencesMixin:
     Any arguments listed with a `*` are required
 
     """
+    
     def get_xrefs_for_symbol(self, 
         species, 
         symbol, 
@@ -80,7 +81,7 @@ class CrossReferencesMixin:
         """
 
         params = {
-            'all_levels': all_levels,
+            'all_levels': int(all_levels),
             'db_type': db_type,
             'external_db': external_db,
             'object_type': object_type,

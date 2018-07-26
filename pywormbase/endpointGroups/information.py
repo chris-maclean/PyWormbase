@@ -42,7 +42,7 @@ class InformationMixin:
         """
 
         params = {
-            'bands': bands
+            'bands': int(bands)
         }
 
         return wormbase_get(self.version_string + '/info/assembly/' + species, query=params)
