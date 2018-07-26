@@ -27,7 +27,7 @@ class ComparativeGenomicsMixin:
         # Arguments
         id* (str): a genetree ID like 'WBGT00000000021203'
         aligned (boolean): Default: False
-        nh_format (str): Default: 'simple'
+        nh_format (str): Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
         sequence (str): Default: 'protein'
 
         # Example
@@ -42,9 +42,15 @@ class ComparativeGenomicsMixin:
         # See also: http://parasite.wormbase.org/rest/documentation/info/genetree
 
         """
+
+        ALLOWED_NH_FORMATS = ['full', 'display_label_composite', 'simple', 'species',
+                              'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip']
+        if nh_format and nh_format not in ALLOWED_NH_FORMATS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(nh_format, ALLOWED_NH_FORMATS))
         
         params = {
-            'aligned': aligned,
+            'aligned': int(aligned),
             'nh_format': nh_format,
             'sequence': sequence
         }
@@ -65,7 +71,7 @@ class ComparativeGenomicsMixin:
         id* (str): a genetree ID like 'WBGT00000000021203'
         aligned (boolean): Default: False
         db_type (str): Default: 'core'
-        nh_format (str): Default: 'simple'
+        nh_format (str): Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
         object_type (str): Default: None
         sequence (str): Default: 'protein'
         species (str): Default: None
@@ -83,8 +89,14 @@ class ComparativeGenomicsMixin:
 
         """
 
+        ALLOWED_NH_FORMATS = ['full', 'display_label_composite', 'simple', 'species',
+                              'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip']
+        if nh_format and nh_format not in ALLOWED_NH_FORMATS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(nh_format, ALLOWED_NH_FORMATS))
+
         params = {
-            'aligned': aligned,
+            'aligned': int(aligned),
             'db_type': db_type,
             'nh_format': nh_format,
             'object_type': object_type,
@@ -111,7 +123,7 @@ class ComparativeGenomicsMixin:
         aligned (boolean): Default: False
         db_type (str): Default: 'core'
         external_db (str): Default: None
-        nh_format (str): Default: 'simple'
+        nh_format (str): Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
         object_type (str): Default: None
         sequence (str): Default: 'protein'
 
@@ -127,9 +139,15 @@ class ComparativeGenomicsMixin:
         # See also: http://parasite.wormbase.org/rest/documentation/info/genetree_member_symbol
         
         """
+
+        ALLOWED_NH_FORMATS = ['full', 'display_label_composite', 'simple', 'species',
+                              'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip']
+        if nh_format and nh_format not in ALLOWED_NH_FORMATS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(nh_format, ALLOWED_NH_FORMATS))
         
         params = {
-            'aligned': aligned,
+            'aligned': int(aligned),
             'db_type': db_type,
             'external_db': external_db,
             'nh_format': nh_format,
@@ -166,6 +184,9 @@ class ComparativeGenomicsMixin:
         client.get_orthologues_by_gene('WBGene00221255')
         ```
 
+        # Raises
+        Exception: If an invalid value is provided for `response_format`, `sequence`, or `orthologue_type`
+
         # Returns
         data (dict): a dictionary with the data returned by the API
         
@@ -174,7 +195,7 @@ class ComparativeGenomicsMixin:
         """
 
         params = {
-            'aligned': aligned,
+            'aligned': int(aligned),
             'format': response_format,
             'sequence': sequence,
             'species': species,
@@ -182,6 +203,21 @@ class ComparativeGenomicsMixin:
             'target_taxon': target_taxon,
             'type': orthologue_type
         }
+
+        ALLOWED_FORMATS = ['full', 'condensed']
+        if response_format and response_format not in ALLOWED_FORMATS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(response_format, ALLOWED_FORMATS))
+
+        ALLOWED_SEQS = ['none', 'cdna', 'protein']
+        if sequence and sequence not in ALLOWED_SEQS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(sequence, ALLOWED_SEQS))
+
+        ALLOWED_ORTHOS = ['orthologues', 'paralogues', 'projections', 'all']
+        if orthologue_type and orthologue_type not in ALLOWED_ORTHOS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(orthologue_type, ALLOWED_ORTHOS))
 
         return wormbase_get(self.version_string + '/homology/id/' + gene_id, query=params)
 
@@ -216,6 +252,9 @@ class ComparativeGenomicsMixin:
         client = pywormbase.WormbaseClient()
         client.get_orthologues_by_gene('brugia_malayi_prjna10729', 'Bm994')
         ```
+
+        # Raises
+        Exception: If an invalid value is provided for `response_format`, `sequence`, or `orthologue_type`
 
         # Returns
         data (dict): a dictionary with the data returned by the API
