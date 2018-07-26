@@ -31,7 +31,7 @@ PyWormbase is free and open-source, licensed under the MIT license. If you are u
 ```
      . .  .  .  . . .
    .                  .                   _.-/`/`'-._
-   . Thanks for using!.                 /_..--''''_-'
+   . Thanks for using .                 /_..--''''_-'
     .    PyWormbase! .                 //        \
      . .  .  .      .`                //-.__\_\.-'
                 `..'  _\\\//  --.___ // ___.---.._
