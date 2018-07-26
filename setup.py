@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="pywormbase",
-    version="0.0.0",
+    version="0.1.0",
     author="Christopher Anna",
     author_email="canna12@gmail.com",
     description="An interface to the Wormbase REST API",
@@ -15,7 +15,7 @@ setuptools.setup(
     packages=['pywormbase'],
     classifiers=(
         "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: GNU GPLv3",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Operating System :: OS Independent"
     )
 )
