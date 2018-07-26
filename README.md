@@ -26,3 +26,27 @@ If you use PyWormbase and are experiencing problems with the package, or if you 
 
 ## License
 PyWormbase is free and open-source, licensed under the MIT license. If you are using this software academically or professionally, please acknowledge this package and my Github page, https://github.com/c-anna, somewhere in your final product. 
+
+```
+     . .  .  .  . . .
+   .                  .                   _.-/`/`'-._
+   . Thanks for using!.                 /_..--''''_-'
+    .    PyWormbase! .                 //        \
+     . .  .  .      .`                //-.__\_\.-'
+                `..'  _\\\//  --.___ // ___.---.._
+                  _- /@/@\  \       ||``          `-_
+                .'  ,\_\_/   |    \_||_/      ,-._   `.
+               ;   { o    /   }     ""        `-._`.   ;
+              ;     `-==-'   /                    \_|   ;
+             |        |>o<|  }@@@}                       |
+             |       <(___<) }@@@@}                      |
+             |       <(___<) }@@@@@}                     |
+             |        <\___<) \_.?@@}                    |
+              ;         V`--V`__./@}                    ;
+               \      tx      ooo@}                    /
+                \                                     /
+                 `.                                 .'
+                   `-._                         _.-'
+                       ``------'''''''''------``
+```
+
