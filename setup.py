@@ -5,14 +5,14 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="pywormbase",
-    version="0.1.0",
+    version="0.1.1",
     author="Christopher Anna",
     author_email="canna12@gmail.com",
     description="An interface to the Wormbase REST API",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/c-anna/PyWormbase",
-    packages=['pywormbase'],
+    packages=['pywormbase', 'pywormbase.endpointGroups'],
     classifiers=(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
