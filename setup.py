@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="pywormbase",
-    version="0.0.0",
+    version="0.1.0",
     author="Christopher Anna",
     author_email="canna12@gmail.com",
     description="An interface to the Wormbase REST API",
