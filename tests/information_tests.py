@@ -28,14 +28,14 @@ class TestInformationMethods(unittest.TestCase):
         self.doTest(self.api.get_info_for_genome('brugia_malayi_prjna10729'))
 
     def test_info_for_all_genomes(self):
-        self.doTest(self.api.get_info_for_all_genomes())
+        self.assertTrue(type(self.api.get_info_for_all_genomes()) is list)
 
     def test_info_for_genome_with_assembly(self):
         self.doTest(self.api.get_info_for_genome_with_assembly(
             'GCA_000951595.1'))
 
     def test_info_for_taxonomy_node(self):
-        self.doTest(self.api.get_info_for_taxonomy_node('Brugia'))
+        self.assertTrue(type(self.api.get_info_for_taxonomy_node('Brugia')) is list)
 
     def test_quality_scores(self):
         self.doTest(self.api.get_quality_scores_for_genome(
