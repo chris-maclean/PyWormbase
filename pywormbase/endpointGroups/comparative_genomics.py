@@ -28,7 +28,7 @@ class ComparativeGenomicsMixin:
         id* (str): a genetree ID like 'WBGT00000000021203'
         aligned (boolean): Default: False
         nh_format (str): Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
-        sequence (str): Default: 'protein'
+        sequence (str): Must be one of ['none', 'cdna', 'protein'] Default: 'protein'
 
         # Example
         ```python
@@ -48,6 +48,11 @@ class ComparativeGenomicsMixin:
         if nh_format and nh_format not in ALLOWED_NH_FORMATS:
             raise Exception('Format type {} is not supported. Allowable format values are {}'
                             .format(nh_format, ALLOWED_NH_FORMATS))
+
+        ALLOWED_SEQS = ['none', 'cdna', 'protein']
+        if sequence and sequence not in ALLOWED_SEQS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(sequence, ALLOWED_SEQS))
         
         params = {
             'aligned': int(aligned),
@@ -73,7 +78,7 @@ class ComparativeGenomicsMixin:
         db_type (str): Default: 'core'
         nh_format (str): Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
         object_type (str): Default: None
-        sequence (str): Default: 'protein'
+        sequence (str): Must be one of ['none', 'cdna', 'protein'] Default: 'protein'
         species (str): Default: None
 
         # Example
@@ -94,6 +99,11 @@ class ComparativeGenomicsMixin:
         if nh_format and nh_format not in ALLOWED_NH_FORMATS:
             raise Exception('Format type {} is not supported. Allowable format values are {}'
                             .format(nh_format, ALLOWED_NH_FORMATS))
+
+        ALLOWED_SEQS = ['none', 'cdna', 'protein']
+        if sequence and sequence not in ALLOWED_SEQS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(sequence, ALLOWED_SEQS))
 
         params = {
             'aligned': int(aligned),
@@ -125,7 +135,7 @@ class ComparativeGenomicsMixin:
         external_db (str): Default: None
         nh_format (str): Must be one of ['full', 'display_label_composite', 'simple', 'species', 'species_short_name', 'ncbi_taxon', 'ncbi_name', 'njtree', 'phylip'] Default: 'simple'
         object_type (str): Default: None
-        sequence (str): Default: 'protein'
+        sequence (str): Must be one of ['none', 'cdna', 'protein'] Default: 'protein'
 
         # Example
         ```python
@@ -145,6 +155,11 @@ class ComparativeGenomicsMixin:
         if nh_format and nh_format not in ALLOWED_NH_FORMATS:
             raise Exception('Format type {} is not supported. Allowable format values are {}'
                             .format(nh_format, ALLOWED_NH_FORMATS))
+
+        ALLOWED_SEQS = ['none', 'cdna', 'protein']
+        if sequence and sequence not in ALLOWED_SEQS:
+            raise Exception('Format type {} is not supported. Allowable format values are {}'
+                            .format(sequence, ALLOWED_SEQS))
         
         params = {
             'aligned': int(aligned),
@@ -172,7 +187,7 @@ class ComparativeGenomicsMixin:
         gene_id* (str): A stable ID
         aligned (boolean): Default: True
         response_format (str): Must be one of ['full', 'condensed'] Default: 'full'
-        sequence (str): Must be one of ['none', 'cdna', 'proteint'] Default: 'protein'
+        sequence (str): Must be one of ['none', 'cdna', 'protein'] Default: 'protein'
         species (str): Default: None
         target_species (str): Default: None
         target_taxon (int): Default: None
