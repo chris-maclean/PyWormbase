@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/c-anna/PyWormbase",
-    packages=['wormbase_parasite', 'wormbase_parasite.endpointGroups'],
+    packages=['wormbase_parasite', 'wormbase_parasite.endpoint_groups'],
     classifiers=(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
