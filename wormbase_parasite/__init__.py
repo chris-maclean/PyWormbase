@@ -1,1 +1,1 @@
-from .wormbaseClient import WormbaseClient
+from .wormbase_client import WormbaseClient

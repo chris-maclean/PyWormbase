@@ -1,12 +1,12 @@
 import logging
-from .endpointGroups import ComparativeGenomics
-from .endpointGroups import CrossReferences
-from .endpointGroups import Information
-from .endpointGroups import Lookup
-from .endpointGroups import Mapping
-from .endpointGroups import Ontology
-from .endpointGroups import Overlap
-from .endpointGroups import Sequence
+from .endpoint_groups import ComparativeGenomics
+from .endpoint_groups import CrossReferences
+from .endpoint_groups import Information
+from .endpoint_groups import Lookup
+from .endpoint_groups import Mapping
+from .endpoint_groups import Ontology
+from .endpoint_groups import Overlap
+from .endpoint_groups import Sequence
 
 class WormbaseClient(
     ComparativeGenomics, 
@@ -19,7 +19,7 @@ class WormbaseClient(
     Sequence):
     """The main entry point to all Wormbase ParaSite interactions
     
-    This client inherits from mixins in the #endpointGroups module. Those mixins hold the source code that retrieves data from the Wormbase REST API.
+    This client inherits from mixins in the #endpoint_groups module. Those mixins hold the source code that retrieves data from the Wormbase REST API.
 
     # Arguments
     version (str or int): The desired REST API version number. This number will be included in the base URL when making calls to the API. Omit to use the latest version. Visit http://parasite.wormbase.org/rest/ to see the latest version.

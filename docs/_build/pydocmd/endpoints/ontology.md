@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.ontology">pywormbase.endpointGroups.ontology</h1>
+<h1 id="wormbase_parasite.endpoint_groups.ontology">wormbase_parasite.endpoint_groups.ontology</h1>
 
 
-<h2 id="pywormbase.endpointGroups.ontology.OntologyMixin">OntologyMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.ontology.OntologyMixin">OntologyMixin</h2>
 
 ```python
 OntologyMixin(self, /, *args, **kwargs)
@@ -21,7 +21,7 @@ GET /ontology/name/:name
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_ancestry">get_ancestry</h3>
+<h3 id="wormbase_parasite.endpoint_groups.ontology.OntologyMixin.get_ancestry">get_ancestry</h3>
 
 ```python
 OntologyMixin.get_ancestry(self, id, ontology=None)
@@ -36,7 +36,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_ancestry('GO:0005667')
 ```
 
@@ -48,7 +48,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ances
 
 
 
-<h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_ancestry_chart">get_ancestry_chart</h3>
+<h3 id="wormbase_parasite.endpoint_groups.ontology.OntologyMixin.get_ancestry_chart">get_ancestry_chart</h3>
 
 ```python
 OntologyMixin.get_ancestry_chart(self, id, ontology=None)
@@ -63,7 +63,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_ancestry_chart('GO:0005667')
 ```
 
@@ -75,7 +75,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/ontology_ances
 
 
 
-<h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_descendants">get_descendants</h3>
+<h3 id="wormbase_parasite.endpoint_groups.ontology.OntologyMixin.get_descendants">get_descendants</h3>
 
 ```python
 OntologyMixin.get_descendants(self, id, closest_term=False, ontology=None, subset=None, zero_distance=False)
@@ -93,7 +93,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_descendants('GO:0005667')
 ```
 
@@ -105,7 +105,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/ontology_de
 
 
 
-<h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_ontology_by_id">get_ontology_by_id</h3>
+<h3 id="wormbase_parasite.endpoint_groups.ontology.OntologyMixin.get_ontology_by_id">get_ontology_by_id</h3>
 
 ```python
 OntologyMixin.get_ontology_by_id(self, id, relation=False, simple=False)
@@ -121,7 +121,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_ontology_by_id('GO:0005667')
 ```
 
@@ -133,7 +133,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/ontology_id__
 
 
 
-<h3 id="pywormbase.endpointGroups.ontology.OntologyMixin.get_ontology_by_name">get_ontology_by_name</h3>
+<h3 id="wormbase_parasite.endpoint_groups.ontology.OntologyMixin.get_ontology_by_name">get_ontology_by_name</h3>
 
 ```python
 OntologyMixin.get_ontology_by_name(self, name, ontology=None, relation=None, simple=False)
@@ -150,7 +150,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_ontology_by_name('transcription factor complex')
 ```
 

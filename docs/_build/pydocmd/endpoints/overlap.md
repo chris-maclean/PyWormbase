@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.overlap">pywormbase.endpointGroups.overlap</h1>
+<h1 id="wormbase_parasite.endpoint_groups.overlap">wormbase_parasite.endpoint_groups.overlap</h1>
 
 
-<h2 id="pywormbase.endpointGroups.overlap.OverlapMixin">OverlapMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.overlap.OverlapMixin">OverlapMixin</h2>
 
 ```python
 OverlapMixin(self, /, *args, **kwargs)
@@ -19,7 +19,7 @@ GET /overlap/translation/:id
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.overlap.OverlapMixin.get_overlapping_features">get_overlapping_features</h3>
+<h3 id="wormbase_parasite.endpoint_groups.overlap.OverlapMixin.get_overlapping_features">get_overlapping_features</h3>
 
 ```python
 OverlapMixin.get_overlapping_features(self, feature, id, biotype=None, db_type=None, logic_name=None, misc_set=None, object_type=None, species=None, species_set='mammals')
@@ -41,7 +41,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_overlapping_features('none', 'WBGene00221255')
 ```
 
@@ -57,7 +57,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/overlap_id__
 
 
 
-<h3 id="pywormbase.endpointGroups.overlap.OverlapMixin.get_overlap_by_region">get_overlap_by_region</h3>
+<h3 id="wormbase_parasite.endpoint_groups.overlap.OverlapMixin.get_overlap_by_region">get_overlap_by_region</h3>
 
 ```python
 OverlapMixin.get_overlap_by_region(self, feature, region, species, biotype=None, cell_type=None, db_type='core', logic_name=None, misc_set=None, object_type=None, species_set='mammals', trim_downstream=False, trim_upstream=False)
@@ -80,7 +80,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_overlap_by_region('none', 'Bm_v4_Chr2_contig_001:13847151-13862157', 'brugia_malayi_prjna10729')
 ```
 
@@ -92,7 +92,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/overlap_region
 
 
 
-<h3 id="pywormbase.endpointGroups.overlap.OverlapMixin.get_features_for_translation">get_features_for_translation</h3>
+<h3 id="wormbase_parasite.endpoint_groups.overlap.OverlapMixin.get_features_for_translation">get_features_for_translation</h3>
 
 ```python
 OverlapMixin.get_features_for_translation(self, id, db_type=None, feature='protein_feature', species=None, data_type=None)
@@ -110,7 +110,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_features_for_translation('Bm4789')
 ```
 

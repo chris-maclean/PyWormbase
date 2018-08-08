@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.lookup">pywormbase.endpointGroups.lookup</h1>
+<h1 id="wormbase_parasite.endpoint_groups.lookup">wormbase_parasite.endpoint_groups.lookup</h1>
 
 
-<h2 id="pywormbase.endpointGroups.lookup.LookupMixin">LookupMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin">LookupMixin</h2>
 
 ```python
 LookupMixin(self, /, *args, **kwargs)
@@ -21,7 +21,7 @@ POST /lookup/symbol/:species/:symbol
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.lookup.LookupMixin.lookup_by_id">lookup_by_id</h3>
+<h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.lookup_by_id">lookup_by_id</h3>
 
 ```python
 LookupMixin.lookup_by_id(self, id, db_type=None, expand=False, format='full', species=None)
@@ -39,7 +39,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.lookup_by_id('WBGene00221255')
 ```
 
@@ -51,7 +51,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup__
 
 
 
-<h3 id="pywormbase.endpointGroups.lookup.LookupMixin.lookup_by_name">lookup_by_name</h3>
+<h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.lookup_by_name">lookup_by_name</h3>
 
 ```python
 LookupMixin.lookup_by_name(self, name, biotypes=None, level='gene', xrefs=False)
@@ -68,7 +68,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.lookup_by_id('WBGene00221255')
 ```
 
@@ -80,7 +80,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup_geno
 
 
 
-<h3 id="pywormbase.endpointGroups.lookup.LookupMixin.batch_lookup_by_id">batch_lookup_by_id</h3>
+<h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.batch_lookup_by_id">batch_lookup_by_id</h3>
 
 ```python
 LookupMixin.batch_lookup_by_id(self, ids, db_type=None, expand=False, format='full', object_type=None, species=None)
@@ -99,7 +99,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 id_list = ["WBGene00221255", "__VAR(gene_stable_id_2)__" ]
 client.batch_lookup_by_id(id_list)
 id_string = "WBGene00221255,__VAR(gene_stable_id_2)__"
@@ -114,7 +114,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup_post
 
 
 
-<h3 id="pywormbase.endpointGroups.lookup.LookupMixin.get_symbol_from_external_db">get_symbol_from_external_db</h3>
+<h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.get_symbol_from_external_db">get_symbol_from_external_db</h3>
 
 ```python
 LookupMixin.get_symbol_from_external_db(self, species, symbol, expand=False, format='full')
@@ -131,7 +131,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.batch_lookup_by_id('brugia_malayi_prjna10729', 'Bm994')
 ```
 
@@ -144,7 +144,7 @@ __See also: http://parasite.wormbase.org/rest/documentation/info/symbol_lookup__
 
 
 
-<h3 id="pywormbase.endpointGroups.lookup.LookupMixin.batch_get_symbol_from_external_db">batch_get_symbol_from_external_db</h3>
+<h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.batch_get_symbol_from_external_db">batch_get_symbol_from_external_db</h3>
 
 ```python
 LookupMixin.batch_get_symbol_from_external_db(self, species, symbols, expand=False, format='full')
@@ -161,7 +161,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 symbol_list = ["Bm994", "__VAR(gene_symbol2)__"]
 client.batch_get_symbol_from_external_db('brugia_malayi_prjna10729', symbol_list)
 symbol_string = "Bm994,__VAR(gene_symbol2)__"
