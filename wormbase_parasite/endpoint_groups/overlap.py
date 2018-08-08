@@ -40,7 +40,7 @@ class OverlapMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_overlapping_features('none', 'WBGene00221255')
         ```
 
@@ -110,7 +110,7 @@ class OverlapMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_overlap_by_region('none', 'Bm_v4_Chr2_contig_001:13847151-13862157', 'brugia_malayi_prjna10729')
         ```
 
@@ -167,7 +167,7 @@ class OverlapMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_features_for_translation('Bm4789')
         ```
 

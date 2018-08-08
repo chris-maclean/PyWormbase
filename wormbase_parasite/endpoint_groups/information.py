@@ -30,7 +30,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_assemblies_for_species('brugia_malayi_prjna10729')
         ```
 
@@ -57,7 +57,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_info_for_region('Bm_v4_Chr2_contig_001', 'brugia_malayi_prjna10729')
         ```
 
@@ -83,7 +83,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_info_for_genome('brugia_malayi_prjna10729')
         ```
 
@@ -108,7 +108,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_info_for_all_genomes()
         ```
 
@@ -133,7 +133,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_info_for_genome_with_assembly('GCA_000951595.1')
         ```
 
@@ -159,7 +159,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_info_for_taxonomy_node('Brugia')
         ```
 
@@ -184,7 +184,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_quality_scores_for_genome('brugia_malayi_prjna10729')
         ```
 
@@ -204,7 +204,7 @@ class InformationMixin:
         
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_release_info()
         ```
 
@@ -222,7 +222,7 @@ class InformationMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_available_species()
         ```
 

@@ -27,7 +27,7 @@ class OntologyMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_ancestry('GO:0005667')
         ```
 
@@ -55,7 +55,7 @@ class OntologyMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_ancestry_chart('GO:0005667')
         ```
 
@@ -89,7 +89,7 @@ class OntologyMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_descendants('GO:0005667')
         ```
 
@@ -122,7 +122,7 @@ class OntologyMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_ontology_by_id('GO:0005667')
         ```
 
@@ -155,7 +155,7 @@ class OntologyMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_ontology_by_name('transcription factor complex')
         ```
 
