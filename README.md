@@ -5,7 +5,7 @@ This package is an interface to the WormBase ParaSite REST API. You can use it i
 Installation is simple with `pip`. Simply run
 
 ```Python
-> pip install wormbase_parasite
+> pip install wormbase-parasite
 ```
 
 to retrieve this package from the PyPI package index.
