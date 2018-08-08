@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 import unittest
 import test_util
-from pywormbase import WormbaseClient
+from wormbase_parasite import WormbaseClient
 
 class TestLookupMethods(unittest.TestCase):
     def setUp(self):

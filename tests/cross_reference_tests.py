@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../')
 import unittest
-from pywormbase import WormbaseClient
+from wormbase_parasite import WormbaseClient
 import test_util
 
 class TestCrossReferenceMethods(unittest.TestCase):

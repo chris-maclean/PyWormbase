@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setuptools.setup(
-    name="pywormbase",
+    name="wormbase_parasite",
     version="0.1.1",
     author="Christopher Anna",
     author_email="canna12@gmail.com",
@@ -12,7 +12,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/c-anna/PyWormbase",
-    packages=['pywormbase', 'pywormbase.endpointGroups'],
+    packages=['wormbase_parasite', 'wormbase_parasite.endpointGroups'],
     classifiers=(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
