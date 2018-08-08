@@ -30,7 +30,7 @@ class MappingMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.cdna2genomic('Bm4789', 'transcript', '100..300')
         ```
 
@@ -63,7 +63,7 @@ class MappingMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.cds2genomic('Bm4789', 'transcript', '1..300')
         ```
 
@@ -96,7 +96,7 @@ class MappingMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.cds2genomic('Bm4789', '1..100')
         ```
 

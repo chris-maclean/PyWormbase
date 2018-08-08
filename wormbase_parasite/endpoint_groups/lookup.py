@@ -34,7 +34,7 @@ class LookupMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.lookup_by_id('WBGene00221255')
         ```
 
@@ -69,7 +69,7 @@ class LookupMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.lookup_by_id('WBGene00221255')
         ```
 
@@ -114,7 +114,7 @@ class LookupMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         id_list = ["WBGene00221255", "__VAR(gene_stable_id_2)__" ]
         client.batch_lookup_by_id(id_list)
         id_string = "WBGene00221255,__VAR(gene_stable_id_2)__"
@@ -159,7 +159,7 @@ class LookupMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.batch_lookup_by_id('brugia_malayi_prjna10729', 'Bm994')
         ```
 
@@ -193,7 +193,7 @@ class LookupMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         symbol_list = ["Bm994", "__VAR(gene_symbol2)__"]
         client.batch_get_symbol_from_external_db('brugia_malayi_prjna10729', symbol_list)
         symbol_string = "Bm994,__VAR(gene_symbol2)__"

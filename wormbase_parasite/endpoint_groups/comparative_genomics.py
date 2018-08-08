@@ -32,7 +32,7 @@ class ComparativeGenomicsMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_gene_tree_dump('WBGT00000000021203')
         ```
         
@@ -83,7 +83,7 @@ class ComparativeGenomicsMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_gene_tree_by_member('WBGT00000000021203')
         ```
 
@@ -139,7 +139,7 @@ class ComparativeGenomicsMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_gene_tree_with_gene('Bm994', 'brugia_malayi_prjna10729')
         ```
 
@@ -195,7 +195,7 @@ class ComparativeGenomicsMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_orthologues_by_gene('WBGene00221255')
         ```
 
@@ -264,7 +264,7 @@ class ComparativeGenomicsMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_orthologues_by_gene('brugia_malayi_prjna10729', 'Bm994')
         ```
 

@@ -45,7 +45,7 @@ class SequenceMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_sequence('WBGene00221255')
         ```
 
@@ -122,7 +122,7 @@ class SequenceMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         id_list = ["WBGene00221255", "__VAR(gene_stable_id_2)__"]
         client.batch_get_sequence(id_list)
 
@@ -206,7 +206,7 @@ class SequenceMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_sequence_for_region('Bm_v4_Chr2_contig_001:13847151-13862157:1', 'brugia_malayi_prjna10729')
         ```
 
@@ -267,7 +267,7 @@ class SequenceMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         region_list = ["Bm_v4_Chr2_contig_001:13847151-13862157:1", "Bmal_v3_scaffold139:57600..85000"]
         client.batch_get_sequence_for_region('brugia_malayi_prjna10729', region_list)
 

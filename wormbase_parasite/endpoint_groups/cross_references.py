@@ -32,7 +32,7 @@ class CrossReferencesMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_xrefs_for_symbol('brugia_malayi_prjna10729', 'Bm994')
         ```
 
@@ -69,7 +69,7 @@ class CrossReferencesMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_xrefs_for_id('ENSG00000157764')
         ```
 
@@ -105,7 +105,7 @@ class CrossReferencesMixin:
 
         # Example
         ```python
-        client = pywormbase.WormbaseClient()
+        client = wormbase_parasite.WormbaseClient()
         client.get_xrefs_for_gene_and_species('Bm994', 'brugia_malayi_prjna10729')
         ```
 
