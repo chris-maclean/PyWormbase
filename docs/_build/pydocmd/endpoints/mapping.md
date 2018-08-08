@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.mapping">pywormbase.endpointGroups.mapping</h1>
+<h1 id="wormbase_parasite.endpoint_groups.mapping">wormbase_parasite.endpoint_groups.mapping</h1>
 
 
-<h2 id="pywormbase.endpointGroups.mapping.MappingMixin">MappingMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.mapping.MappingMixin">MappingMixin</h2>
 
 ```python
 MappingMixin(self, /, *args, **kwargs)
@@ -19,7 +19,7 @@ GET /map/translation/:id/:region
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.mapping.MappingMixin.cdna2genomic">cdna2genomic</h3>
+<h3 id="wormbase_parasite.endpoint_groups.mapping.MappingMixin.cdna2genomic">cdna2genomic</h3>
 
 ```python
 MappingMixin.cdna2genomic(self, id, object_type, region, species=None)
@@ -36,7 +36,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.cdna2genomic('Bm4789', 'transcript', '100..300')
 ```
 
@@ -48,7 +48,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/assembly_cdna_
 
 
 
-<h3 id="pywormbase.endpointGroups.mapping.MappingMixin.cds2genomic">cds2genomic</h3>
+<h3 id="wormbase_parasite.endpoint_groups.mapping.MappingMixin.cds2genomic">cds2genomic</h3>
 
 ```python
 MappingMixin.cds2genomic(self, id, object_type, region, species=None)
@@ -65,7 +65,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.cds2genomic('Bm4789', 'transcript', '1..300')
 ```
 
@@ -77,7 +77,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/assembly_cds__
 
 
 
-<h3 id="pywormbase.endpointGroups.mapping.MappingMixin.protein2genomic">protein2genomic</h3>
+<h3 id="wormbase_parasite.endpoint_groups.mapping.MappingMixin.protein2genomic">protein2genomic</h3>
 
 ```python
 MappingMixin.protein2genomic(self, id, region, object_type=None, species=None)
@@ -94,7 +94,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.cds2genomic('Bm4789', '1..100')
 ```
 

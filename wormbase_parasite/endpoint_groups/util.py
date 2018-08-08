@@ -13,7 +13,7 @@ HEADERS = {
 def wormbase_get(endpoint, query=None):
     """Performs an HTTP GET request to the specified endpoint
 
-    This method is not for use outside of the #endpointGroups module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
+    This method is not for use outside of the #endpoint_groups module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
     
     # Parameters
     endpoint (str): the full endpoint that will be called. Should include the base URL (e.g., `https://parasite.wormbase.org/`), the version identifier(e.g., `/rest/`) as well as the endpoint (e.g., `/genetree/id/WBGT00000000021203`).
@@ -42,7 +42,7 @@ def wormbase_get(endpoint, query=None):
 def wormbase_post(endpoint, data=None, query=None):
     """Performs an HTTP POST request to the specified endpoint
 
-    This method is not for use outside of the #endpointGroups module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
+    This method is not for use outside of the #endpoint_groups module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
     
     # Parameters
     endpoint (str): the full endpoint that will be called. Should include the base URL (e.g., `https://parasite.wormbase.org/`), version identifier (e.g., `/rest/`) as well as the endpoint (e.g., `/lookup/id`)

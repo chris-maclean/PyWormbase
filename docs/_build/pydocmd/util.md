@@ -1,14 +1,14 @@
-<h1 id="pywormbase.endpointGroups.util">pywormbase.endpointGroups.util</h1>
+<h1 id="wormbase_parasite.endpoint_groups.util">wormbase_parasite.endpoint_groups.util</h1>
 
 
-<h2 id="pywormbase.endpointGroups.util.wormbase_get">wormbase_get</h2>
+<h2 id="wormbase_parasite.endpoint_groups.util.wormbase_get">wormbase_get</h2>
 
 ```python
 wormbase_get(endpoint, query=None)
 ```
 Performs an HTTP GET request to the specified endpoint
 
-This method is not for use outside of the `endpointGroups` module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
+This method is not for use outside of the `endpoint_groups` module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
 
 __Parameters__
 
@@ -26,14 +26,14 @@ __Returns__
 
 A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
 
-<h2 id="pywormbase.endpointGroups.util.wormbase_post">wormbase_post</h2>
+<h2 id="wormbase_parasite.endpoint_groups.util.wormbase_post">wormbase_post</h2>
 
 ```python
 wormbase_post(endpoint, data=None, query=None)
 ```
 Performs an HTTP POST request to the specified endpoint
 
-This method is not for use outside of the `endpointGroups` module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
+This method is not for use outside of the `endpoint_groups` module. All requests to the WormBase ParaSite REST API should go through #::pywormbase.WormbaseClient
 
 __Parameters__
 

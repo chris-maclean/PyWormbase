@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.sequence">pywormbase.endpointGroups.sequence</h1>
+<h1 id="wormbase_parasite.endpoint_groups.sequence">wormbase_parasite.endpoint_groups.sequence</h1>
 
 
-<h2 id="pywormbase.endpointGroups.sequence.SequenceMixin">SequenceMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.sequence.SequenceMixin">SequenceMixin</h2>
 
 ```python
 SequenceMixin(self, /, *args, **kwargs)
@@ -20,7 +20,7 @@ POST /sequence/region/:species
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.sequence.SequenceMixin.get_sequence">get_sequence</h3>
+<h3 id="wormbase_parasite.endpoint_groups.sequence.SequenceMixin.get_sequence">get_sequence</h3>
 
 ```python
 SequenceMixin.get_sequence(self, id, db_type=None, expand_3prime=None, expand_5prime=None, data_format=None, mask=None, mask_feature=False, multiple_sequences=False, object_type=None, species=None, sequence_type='genomic')
@@ -44,7 +44,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_sequence('WBGene00221255')
 ```
 
@@ -60,7 +60,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/sequence_id__
 
 
 
-<h3 id="pywormbase.endpointGroups.sequence.SequenceMixin.batch_get_sequence">batch_get_sequence</h3>
+<h3 id="wormbase_parasite.endpoint_groups.sequence.SequenceMixin.batch_get_sequence">batch_get_sequence</h3>
 
 ```python
 SequenceMixin.batch_get_sequence(self, ids, db_type=None, expand_3prime=None, expand_5prime=None, data_format=None, mask=None, mask_feature=False, object_type=None, species=None, sequence_type='genomic')
@@ -84,7 +84,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 id_list = ["WBGene00221255", "__VAR(gene_stable_id_2)__"]
 client.batch_get_sequence(id_list)
 
@@ -104,7 +104,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/sequence_id_po
 
 
 
-<h3 id="pywormbase.endpointGroups.sequence.SequenceMixin.get_sequence_for_region">get_sequence_for_region</h3>
+<h3 id="wormbase_parasite.endpoint_groups.sequence.SequenceMixin.get_sequence_for_region">get_sequence_for_region</h3>
 
 ```python
 SequenceMixin.get_sequence_for_region(self, region, species, coord_system=None, coord_system_version=None, expand_3prime=None, expand_5prime=None, data_format=None, mask=None, mask_feature=False)
@@ -126,7 +126,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_sequence_for_region('Bm_v4_Chr2_contig_001:13847151-13862157:1', 'brugia_malayi_prjna10729')
 ```
 
@@ -142,7 +142,7 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/sequence_regio
 
 
 
-<h3 id="pywormbase.endpointGroups.sequence.SequenceMixin.batch_get_sequence_for_region">batch_get_sequence_for_region</h3>
+<h3 id="wormbase_parasite.endpoint_groups.sequence.SequenceMixin.batch_get_sequence_for_region">batch_get_sequence_for_region</h3>
 
 ```python
 SequenceMixin.batch_get_sequence_for_region(self, species, regions, data_format=None, coord_system=None, coord_system_version=None, expand_3prime=None, expand_5prime=None, mask=None, mask_feature=False)
@@ -164,7 +164,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 region_list = ["Bm_v4_Chr2_contig_001:13847151-13862157:1", "Bmal_v3_scaffold139:57600..85000"]
 client.batch_get_sequence_for_region('brugia_malayi_prjna10729', region_list)
 

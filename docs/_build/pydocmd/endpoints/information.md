@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.information">pywormbase.endpointGroups.information</h1>
+<h1 id="wormbase_parasite.endpoint_groups.information">wormbase_parasite.endpoint_groups.information</h1>
 
 
-<h2 id="pywormbase.endpointGroups.information.InformationMixin">InformationMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.information.InformationMixin">InformationMixin</h2>
 
 ```python
 InformationMixin(self, /, *args, **kwargs)
@@ -25,7 +25,7 @@ GET /info/species
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_assemblies_for_species">get_assemblies_for_species</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_assemblies_for_species">get_assemblies_for_species</h3>
 
 ```python
 InformationMixin.get_assemblies_for_species(self, species, bands=False)
@@ -40,7 +40,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_assemblies_for_species('brugia_malayi_prjna10729')
 ```
 
@@ -52,7 +52,7 @@ __See also: http://parasite.wormbase.org/rest/documentation/info/assembly_info__
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_info_for_region">get_info_for_region</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_info_for_region">get_info_for_region</h3>
 
 ```python
 InformationMixin.get_info_for_region(self, region_name, species, bands=False)
@@ -68,7 +68,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_info_for_region('Bm_v4_Chr2_contig_001', 'brugia_malayi_prjna10729')
 ```
 
@@ -80,7 +80,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/assembly_st
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_info_for_genome">get_info_for_genome</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_info_for_genome">get_info_for_genome</h3>
 
 ```python
 InformationMixin.get_info_for_genome(self, genome_name, expand=False)
@@ -95,7 +95,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_info_for_genome('brugia_malayi_prjna10729')
 ```
 
@@ -107,7 +107,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genome
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_info_for_all_genomes">get_info_for_all_genomes</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_info_for_all_genomes">get_info_for_all_genomes</h3>
 
 ```python
 InformationMixin.get_info_for_all_genomes(self, expand=False)
@@ -121,7 +121,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_info_for_all_genomes()
 ```
 
@@ -133,7 +133,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genome
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_info_for_genome_with_assembly">get_info_for_genome_with_assembly</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_info_for_genome_with_assembly">get_info_for_genome_with_assembly</h3>
 
 ```python
 InformationMixin.get_info_for_genome_with_assembly(self, assembly_id, expand=False)
@@ -147,7 +147,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_info_for_genome_with_assembly('GCA_000951595.1')
 ```
 
@@ -159,7 +159,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genome
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_info_for_taxonomy_node">get_info_for_taxonomy_node</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_info_for_taxonomy_node">get_info_for_taxonomy_node</h3>
 
 ```python
 InformationMixin.get_info_for_taxonomy_node(self, taxon_name, expand=False)
@@ -174,7 +174,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_info_for_taxonomy_node('Brugia')
 ```
 
@@ -186,7 +186,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genome
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_quality_scores_for_genome">get_quality_scores_for_genome</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_quality_scores_for_genome">get_quality_scores_for_genome</h3>
 
 ```python
 InformationMixin.get_quality_scores_for_genome(self, genome_name)
@@ -200,7 +200,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_quality_scores_for_genome('brugia_malayi_prjna10729')
 ```
 
@@ -212,7 +212,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_qualit
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_release_info">get_release_info</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_release_info">get_release_info</h3>
 
 ```python
 InformationMixin.get_release_info(self)
@@ -224,7 +224,7 @@ This function takes no arguments, but its response is determined by the API vers
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_release_info()
 ```
 
@@ -236,7 +236,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/info_wormba
 
 
 
-<h3 id="pywormbase.endpointGroups.information.InformationMixin.get_available_species">get_available_species</h3>
+<h3 id="wormbase_parasite.endpoint_groups.information.InformationMixin.get_available_species">get_available_species</h3>
 
 ```python
 InformationMixin.get_available_species(self)
@@ -246,7 +246,7 @@ InformationMixin.get_available_species(self)
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_available_species()
 ```
 

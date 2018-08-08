@@ -1,17 +1,17 @@
-<h1 id="pywormbase">pywormbase</h1>
+<h1 id="wormbase_parasite">wormbase_parasite</h1>
 
 
-<h2 id="pywormbase.wormbaseClient">pywormbase.wormbaseClient</h2>
+<h2 id="wormbase_parasite.wormbase_client">wormbase_parasite.wormbase_client</h2>
 
 
-<h3 id="pywormbase.wormbaseClient.WormbaseClient">WormbaseClient</h3>
+<h3 id="wormbase_parasite.wormbase_client.WormbaseClient">WormbaseClient</h3>
 
 ```python
 WormbaseClient(self, version=None)
 ```
 The main entry point to all Wormbase ParaSite interactions
 
-This client inherits from mixins in the `endpointGroups` module. Those mixins hold the source code that retrieves data from the Wormbase REST API.
+This client inherits from mixins in the `endpoint_groups` module. Those mixins hold the source code that retrieves data from the Wormbase REST API.
 
 __Arguments__
 
@@ -21,11 +21,11 @@ __Arguments__
 __Example__
 
 ```python
->>> import pywormbase
->>> api_latest = pywormbase.WormbaseClient()
+>>> import wormbase_parasite
+>>> api_latest = wormbase_parasite.WormbaseClient()
 >>> api_latest.get_release_info()
 {'status_code': 200, 'data': {'wbps_release': '10', 'wb_release': '263'}}
->>> api_v9 = pywormbase.WormbaseClient(9)
+>>> api_v9 = wormbase_parasite.WormbaseClient(9)
 >>> api_v9.get_release_info()
 {'status_code': 200, 'data': {'wbps_release': '9', 'wb_release': '258'}}
 ```

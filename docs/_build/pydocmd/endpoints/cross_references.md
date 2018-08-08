@@ -1,7 +1,7 @@
-<h1 id="pywormbase.endpointGroups.cross_references">pywormbase.endpointGroups.cross_references</h1>
+<h1 id="wormbase_parasite.endpoint_groups.cross_references">wormbase_parasite.endpoint_groups.cross_references</h1>
 
 
-<h2 id="pywormbase.endpointGroups.cross_references.CrossReferencesMixin">CrossReferencesMixin</h2>
+<h2 id="wormbase_parasite.endpoint_groups.cross_references.CrossReferencesMixin">CrossReferencesMixin</h2>
 
 ```python
 CrossReferencesMixin(self, /, *args, **kwargs)
@@ -19,7 +19,7 @@ GET /xrefs/name/:species/:name
 Any arguments listed with a `*` are required
 
 
-<h3 id="pywormbase.endpointGroups.cross_references.CrossReferencesMixin.get_xrefs_for_symbol">get_xrefs_for_symbol</h3>
+<h3 id="wormbase_parasite.endpoint_groups.cross_references.CrossReferencesMixin.get_xrefs_for_symbol">get_xrefs_for_symbol</h3>
 
 ```python
 CrossReferencesMixin.get_xrefs_for_symbol(self, species, symbol, db_type='core', external_db=None, object_type=None)
@@ -37,7 +37,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_xrefs_for_symbol('brugia_malayi_prjna10729', 'Bm994')
 ```
 
@@ -49,7 +49,7 @@ __See also: http://parasite.wormbase.org/rest/documentation/info/xref_external__
 
 
 
-<h3 id="pywormbase.endpointGroups.cross_references.CrossReferencesMixin.get_xrefs_for_id">get_xrefs_for_id</h3>
+<h3 id="wormbase_parasite.endpoint_groups.cross_references.CrossReferencesMixin.get_xrefs_for_id">get_xrefs_for_id</h3>
 
 ```python
 CrossReferencesMixin.get_xrefs_for_id(self, id, all_levels=False, db_type='core', external_db=None, object_type=None, species=None)
@@ -67,7 +67,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_xrefs_for_id('ENSG00000157764')
 ```
 
@@ -79,7 +79,7 @@ __See also: https://parasite.wormbase.org/rest-10/documentation/info/xref_id__
 
 
 
-<h3 id="pywormbase.endpointGroups.cross_references.CrossReferencesMixin.get_xrefs_for_gene_and_species">get_xrefs_for_gene_and_species</h3>
+<h3 id="wormbase_parasite.endpoint_groups.cross_references.CrossReferencesMixin.get_xrefs_for_gene_and_species">get_xrefs_for_gene_and_species</h3>
 
 ```python
 CrossReferencesMixin.get_xrefs_for_gene_and_species(self, gene_name, species, db_type='core', external_db=None)
@@ -96,7 +96,7 @@ __Arguments__
 __Example__
 
 ```python
-client = pywormbase.WormbaseClient()
+client = wormbase_parasite.WormbaseClient()
 client.get_xrefs_for_gene_and_species('Bm994', 'brugia_malayi_prjna10729')
 ```
 
