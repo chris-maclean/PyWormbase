@@ -11,7 +11,7 @@ Installation is simple with `pip`. Simply run
 to retrieve this package from the PyPI package index.
 
 ## Usage
-The WormBase ParaSite REST API is free and open. No credentials, keys, or tokens are needed to access it. This makes PyWormbase easy to use in scripts, too. First, import `pywormbase`, then instantiate a `WormbaseClient` object:
+The WormBase ParaSite REST API is free and open. No credentials, keys, or tokens are needed to access it. This makes PyWormbase easy to use in scripts, too. First, import `wormbase_parasite`, then instantiate a `WormbaseClient` object:
 
 ```Python
 >>> import wormbase_parasite
