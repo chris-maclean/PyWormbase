@@ -4,7 +4,7 @@ import json
 import logging
 
 
-BASE_URL = 'http://parasite.wormbase.org'
+BASE_URL = 'https://parasite.wormbase.org'
 HEADERS = {
     'Content-Type':'application/json',
     'Accept':'application/json'
@@ -60,10 +60,14 @@ def wormbase_post(endpoint, data=None, query=None):
 
     encoded_endpoint = urllib.parse.quote(endpoint)
 
+    print('/'.join([BASE_URL, encoded_endpoint]))
+
     response = post('/'.join([BASE_URL, encoded_endpoint]),
         params=query,
         data=json.dumps(data),
         headers=HEADERS)
+
+    print(response.text)
 
     if not (200 <= response.status_code < 300):
         print(response)

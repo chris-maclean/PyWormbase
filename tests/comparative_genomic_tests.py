@@ -6,13 +6,13 @@ import test_util
 
 class TestComparativeMethods(unittest.TestCase):
     def setUp(self):
-        self.api = WormbaseClient(10)
+        self.api = WormbaseClient()
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))
 
     def test_gene_tree_dump(self):
-        self.doTest(self.api.get_gene_tree_dump('WBGT00000000021203'))
+        self.doTest(self.api.get_gene_tree_dump('WBGT00000000021204'))
 
     def test_gene_tree_by_member(self):
         self.doTest(self.api.get_gene_tree_by_member('WBGene00221255'))

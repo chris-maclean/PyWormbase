@@ -6,7 +6,7 @@ import test_util
 
 class TestCrossReferenceMethods(unittest.TestCase):
     def setUp(self):
-        self.api = WormbaseClient(10)
+        self.api = WormbaseClient()
 
     def doTest(self, response):
         self.assertTrue(type(response) is list)

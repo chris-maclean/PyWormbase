@@ -51,7 +51,6 @@ class LookupMixin:
             'format': format,
             'species': species
         }
-
         return wormbase_get(self.version_string + '/lookup/id/' + id, query=params)
 
     def lookup_by_name(self,
@@ -219,4 +218,6 @@ class LookupMixin:
         else:
             symbol_list = symbols
 
-        return wormbase_post(self.version_string + '/lookup/symbol/' + species, query=params, data={ 'symbols': symbol_list })
+        return wormbase_post('{}/lookup/symbol/{}/'.format(self.version_string, species), 
+                query=params, 
+                data={ 'symbols': symbol_list })

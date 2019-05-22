@@ -6,7 +6,7 @@ from wormbase_parasite import WormbaseClient
 
 class TestLookupMethods(unittest.TestCase):
     def setUp(self):
-        self.api = WormbaseClient(10)
+        self.api = WormbaseClient()
 
     def doTest(self, response):
         self.assertTrue(test_util.is_dict(response))

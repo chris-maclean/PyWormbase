@@ -6,7 +6,7 @@ from wormbase_parasite import WormbaseClient
 
 class TestOntologyMethods(unittest.TestCase):
     def setUp(self):
-        self.api = WormbaseClient(10)
+        self.api = WormbaseClient()
 
     def doTest(self, response):
         self.assertTrue(type(response) is dict)
