@@ -42,7 +42,7 @@ class OntologyMixin:
             'ontology': ontology
         }
 
-        return wormbase_get(self.version_string + '/ontology/ancestors/' + id, query=params)
+        return wormbase_get('{}/ontology/ancestors/{}'.format(self.version_string, id), query=params)
 
     def get_ancestry_chart(self,
         id,
@@ -70,7 +70,7 @@ class OntologyMixin:
             'ontology': ontology
         }
 
-        return wormbase_get(self.version_string + '/ontology/ancestors/chart/' + id, query=params)
+        return wormbase_get('{}/ontology/ancestors/chart/{}'.format(self.version_string, id), query=params)
 
     def get_descendants(self,
         id,
@@ -96,7 +96,7 @@ class OntologyMixin:
         # Returns
         data (list): a list of dictionaries representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/ontology_descendants
+        # See also: https://parasite.wormbase.org/rest/documentation/info/ontology_descendants
         
        """
 
@@ -107,7 +107,7 @@ class OntologyMixin:
             'zero_distance': int(zero_distance)
         }
 
-        return wormbase_get(self.version_string + '/ontology/descendants/' + id, query=params)
+        return wormbase_get('{}/ontology/descendants/{}'.format(self.version_string, id), query=params)
 
     def get_ontology_by_id(self,
         id,
@@ -138,7 +138,7 @@ class OntologyMixin:
             'simple': int(simple)
         }
 
-        return wormbase_get(self.version_string + '/ontology/id/' + id, query=params)
+        return wormbase_get('{}/ontology/id/{}'.format(self.version_string, id), query=params)
 
     def get_ontology_by_name(self,
         name,
@@ -172,4 +172,4 @@ class OntologyMixin:
             'simple': int(simple)
         }
 
-        return wormbase_get(self.version_string + '/ontology/name/' + name, query=params)
+        return wormbase_get('{}/ontology/name/{}'.format(self.version_string, name), query=params)

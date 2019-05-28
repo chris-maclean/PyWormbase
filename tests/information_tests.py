@@ -32,7 +32,7 @@ class TestInformationMethods(unittest.TestCase):
 
     def test_info_for_genome_with_assembly(self):
         self.doTest(self.api.get_info_for_genome_with_assembly(
-            'GCA_000951595.1'))
+            'GCA_000950995.1'))
 
     def test_info_for_taxonomy_node(self):
         self.assertTrue(type(self.api.get_info_for_taxonomy_node('Brugia')) is list)

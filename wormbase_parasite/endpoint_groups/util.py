@@ -3,8 +3,8 @@ import urllib
 import json
 import logging
 
-
-BASE_URL = 'http://parasite.wormbase.org'
+logger = logging.getLogger(__name__)
+BASE_URL = 'https://parasite.wormbase.org'
 HEADERS = {
     'Content-Type':'application/json',
     'Accept':'application/json'
@@ -28,6 +28,7 @@ def wormbase_get(endpoint, query=None):
     A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
     """
 
+    logger.debug('GET {}'.format(endpoint))
     encoded_endpoint = urllib.parse.quote(endpoint)
     
     response = get('/'.join([BASE_URL, encoded_endpoint]),
@@ -58,6 +59,8 @@ def wormbase_post(endpoint, data=None, query=None):
     A dictionary that represents exactly the data returned by the WormBase ParaSite API, converted from a JSON object to a Python dictionary using `requests.Response.json()`
     """
 
+    logger.debug('POST {}'.format(endpoint))
+    logger.debug('POST DATA: {}'.format(data))
     encoded_endpoint = urllib.parse.quote(endpoint)
 
     response = post('/'.join([BASE_URL, encoded_endpoint]),
@@ -66,7 +69,6 @@ def wormbase_post(endpoint, data=None, query=None):
         headers=HEADERS)
 
     if not (200 <= response.status_code < 300):
-        print(response)
         raise Exception("Wormbase POST returned with non-200 status code") 
 
     return response.json()

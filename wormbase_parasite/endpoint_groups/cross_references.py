@@ -49,7 +49,7 @@ class CrossReferencesMixin:
             'object_type': object_type
         }
 
-        return wormbase_get(self.version_string + '/xrefs/symbol/' + species + '/' + symbol, query=params)
+        return wormbase_get('{}/xrefs/symbol/{}/{}/'.format(self.version_string, species, symbol), query=params)
 
     def get_xrefs_for_id(self, 
         id, 
@@ -76,7 +76,7 @@ class CrossReferencesMixin:
         # Returns
         data (list): a list of dictionaries representing the data returned by the API
 
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/xref_id
+        # See also: https://parasite.wormbase.org/rest/documentation/info/xref_id
 
         """
 
@@ -88,7 +88,7 @@ class CrossReferencesMixin:
             'species': species
         }
 
-        return wormbase_get(self.version_string + '/xrefs/id/' + id, query=params)
+        return wormbase_get('{}/xrefs/id/{}'.format(self.version_string, id), query=params)
 
     def get_xrefs_for_gene_and_species(self,
         gene_name,
@@ -112,7 +112,7 @@ class CrossReferencesMixin:
         # Returns
         data (list): a list of dictionaries representing the data returned by the API
 
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/xref_id
+        # See also: https://parasite.wormbase.org/rest/documentation/info/xref_id
 
         """
 
@@ -121,4 +121,4 @@ class CrossReferencesMixin:
             'external_db': external_db
         }
 
-        return wormbase_get(self.version_string + '/xrefs/name/' + species + '/' + gene_name, query=params)
+        return wormbase_get('{}/xrefs/name/{}/{}/'.format(self.version_string, species, gene_name), query=params)

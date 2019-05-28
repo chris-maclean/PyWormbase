@@ -76,7 +76,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/assembly_stats__
+__See also: https://parasite.wormbase.org/rest/documentation/info/assembly_stats__
 
 
 
@@ -103,7 +103,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genome__
+__See also: https://parasite.wormbase.org/rest/documentation/info/info_genome__
 
 
 
@@ -129,7 +129,7 @@ __Returns__
 
 `data (list)`: a list of dictionaries representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genomes__
+__See also: https://parasite.wormbase.org/rest/documentation/info/info_genomes__
 
 
 
@@ -155,7 +155,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genomes_assembly__
+__See also: https://parasite.wormbase.org/rest/documentation/info/info_genomes_assembly__
 
 
 
@@ -182,7 +182,7 @@ __Returns__
 
 `data (list)`: a list of dictionaries representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genomes_taxonomy__
+__See also: https://parasite.wormbase.org/rest/documentation/info/info_genomes_taxonomy__
 
 
 
@@ -208,7 +208,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/info_quality_name__
+__See also: https://parasite.wormbase.org/rest/documentation/info/info_quality_name__
 
 
 
@@ -232,7 +232,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/info_wormbase_version__
+__See also: https://parasite.wormbase.org/rest/documentation/info/info_wormbase_version__
 
 
 
@@ -254,7 +254,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/species__
+__See also: https://parasite.wormbase.org/rest/documentation/info/species__
 
 
 

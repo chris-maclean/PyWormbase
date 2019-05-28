@@ -46,7 +46,7 @@ class MappingMixin:
             'species': species
         }
 
-        return wormbase_get(self.version_string + '/map/cdna/' + id + '/' + region, query=params)
+        return wormbase_get('{}/map/cdna/{}/{}'.format(self.version_string, id, region), query=params)
 
     def cds2genomic(self,
         id,
@@ -79,7 +79,7 @@ class MappingMixin:
             'species': species
         }
 
-        return wormbase_get(self.version_string + '/map/cds/' + id + '/' + region, query=params)
+        return wormbase_get('{}/map/cds/{}/{}'.format(self.version_string, id, region), query=params)
 
     def protein2genomic(self,
         id,
@@ -112,4 +112,4 @@ class MappingMixin:
             'species': species
         }
 
-        return wormbase_get(self.version_string + '/map/translation/' + id + '/' + region, query=params)
+        return wormbase_get('{}/map/translation/{}/{}'.format(self.version_string, id, region), query=params)

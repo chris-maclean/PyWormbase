@@ -75,7 +75,7 @@ __Returns__
 
 `data (list)`: a list of dictionaries representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/xref_id__
+__See also: https://parasite.wormbase.org/rest/documentation/info/xref_id__
 
 
 
@@ -104,7 +104,7 @@ __Returns__
 
 `data (list)`: a list of dictionaries representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/xref_id__
+__See also: https://parasite.wormbase.org/rest/documentation/info/xref_id__
 
 
 
