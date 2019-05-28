@@ -41,7 +41,7 @@ class LookupMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup
+        # See also: https://parasite.wormbase.org/rest/documentation/info/lookup
         
         """
 
@@ -51,7 +51,7 @@ class LookupMixin:
             'format': format,
             'species': species
         }
-        return wormbase_get(self.version_string + '/lookup/id/' + id, query=params)
+        return wormbase_get('{}/lookup/id/'.format(self.version_string) + id, query=params)
 
     def lookup_by_name(self,
         name,
@@ -75,7 +75,7 @@ class LookupMixin:
         # Returns
         data (list): a list of dictionaries representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup_genome
+        # See also: https://parasite.wormbase.org/rest/documentation/info/lookup_genome
         
         """
 
@@ -91,7 +91,7 @@ class LookupMixin:
             'xrefs': int(xrefs)
         }
 
-        return wormbase_get(self.version_string + '/lookup/genome/' + name, query=params)
+        return wormbase_get('{}/lookup/genome/'.format(self.version_string) + name, query=params)
 
 
     def batch_lookup_by_id(self,
@@ -123,7 +123,7 @@ class LookupMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup_post
+        # See also: https://parasite.wormbase.org/rest/documentation/info/lookup_post
         
         """
 
@@ -141,7 +141,7 @@ class LookupMixin:
         else:
             id_list = ids
         
-        return wormbase_post(self.version_string + '/lookup/id', query=params, data={ 'ids': id_list })
+        return wormbase_post('{}/lookup/id'.format(self.version_string), query=params, data={ 'ids': id_list })
 
     def get_symbol_from_external_db(self,
         species,
@@ -175,7 +175,7 @@ class LookupMixin:
             'format': format
         }
 
-        return wormbase_get(self.version_string + '/lookup/symbol/' + species + '/' + symbol, query=params)
+        return wormbase_get('{}/lookup/symbol/{}/{}'.format(self.version_string, species, symbol), query=params)
 
     def batch_get_symbol_from_external_db(self,
         species,
@@ -203,7 +203,7 @@ class LookupMixin:
         data (dict): a dictionary representing the data returned by the API
 
 
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/symbol_post
+        # See also: https://parasite.wormbase.org/rest/documentation/info/symbol_post
         
         """
         

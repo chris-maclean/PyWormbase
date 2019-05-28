@@ -79,7 +79,7 @@ class OverlapMixin:
             'species_set': species_set
         }
 
-        return wormbase_get(self.version_string + '/overlap/id/' + id, query=params)
+        return wormbase_get('{}/overlap/id/{}'.format(self.version_string, id), query=params)
 
     def get_overlap_by_region(self,
         feature,
@@ -148,7 +148,7 @@ class OverlapMixin:
             'trim_downstream': int(trim_downstream)
         }
 
-        return wormbase_get(self.version_string + '/overlap/region/' + species + '/' + region, query=params)
+        return wormbase_get('{}/overlap/region/{}/{}'.format(self.version_string, species, region), query=params)
 
     def get_features_for_translation(self,
         id,
@@ -195,4 +195,4 @@ class OverlapMixin:
             'type': data_type
         }
 
-        return wormbase_get(self.version_string + '/overlap/translation/' + id, query=params)
+        return wormbase_get('{}/overlap/translation/{}'.format(self.version_string, id), query=params)

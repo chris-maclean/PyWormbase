@@ -47,7 +47,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup__
+__See also: https://parasite.wormbase.org/rest/documentation/info/lookup__
 
 
 
@@ -76,7 +76,7 @@ __Returns__
 
 `data (list)`: a list of dictionaries representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup_genome__
+__See also: https://parasite.wormbase.org/rest/documentation/info/lookup_genome__
 
 
 
@@ -110,7 +110,7 @@ __Returns__
 
 `data (dict)`: a dictionary representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/lookup_post__
+__See also: https://parasite.wormbase.org/rest/documentation/info/lookup_post__
 
 
 
@@ -173,7 +173,7 @@ __Returns__
 `data (dict)`: a dictionary representing the data returned by the API
 
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/symbol_post__
+__See also: https://parasite.wormbase.org/rest/documentation/info/symbol_post__
 
 
 

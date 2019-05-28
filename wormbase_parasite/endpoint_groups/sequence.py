@@ -92,7 +92,7 @@ class SequenceMixin:
             'sequence_type': sequence_type
         }
 
-        return wormbase_get(self.version_string + '/sequence/id/' + id, query=params)
+        return wormbase_get('{}/sequence/id/{}'.format(self.version_string, id), query=params)
 
     def batch_get_sequence(self,
         ids,
@@ -179,7 +179,7 @@ class SequenceMixin:
             'sequence_type': sequence_type
         }
 
-        return wormbase_post(self.version_string + '/sequence/id', query=params, data={ 'ids' : id_list })
+        return wormbase_post('{}/sequence/id'.format(self.version_string), query=params, data={ 'ids' : id_list })
 
     def get_sequence_for_region(self,
         region,
@@ -240,7 +240,7 @@ class SequenceMixin:
             'data_format': data_format
         }
 
-        return wormbase_get(self.version_string + '/sequence/region/' + species + '/' + region, query=params)
+        return wormbase_get('{}/sequence/region/{}/{}'.format(self.version_string, species, region), query=params)
 
     def batch_get_sequence_for_region(self,
         species,
@@ -311,4 +311,4 @@ class SequenceMixin:
             'data_format': data_format
         }
 
-        return wormbase_post(self.version_string + '/sequence/region/' + species, query=params, data={ 'regions' : region_list })
+        return wormbase_post('{}/sequence/region/{}'.format(self.version_string, species), query=params, data={ 'regions' : region_list })

@@ -45,7 +45,7 @@ class InformationMixin:
             'bands': int(bands)
         }
 
-        return wormbase_get(self.version_string + '/info/assembly/' + species, query=params)
+        return wormbase_get('{}/info/assembly/{}'.format(self.version_string, species), query=params)
 
     def get_info_for_region(self, region_name, species, bands=False):
         """`GET /info/assembly/:species/:region_name`
@@ -64,7 +64,7 @@ class InformationMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/assembly_stats
+        # See also: https://parasite.wormbase.org/rest/documentation/info/assembly_stats
         
         """
 
@@ -72,7 +72,7 @@ class InformationMixin:
             'bands': int(bands)
         }
 
-        return wormbase_get(self.version_string + '/info/assembly/' + species + '/' + region_name, query=params)
+        return wormbase_get('{}/info/assembly/{}/{}'.format(self.version_string, species, region_name), query=params)
 
     def get_info_for_genome(self, genome_name, expand=False):
         """`GET /info/genomes/:name`
@@ -90,7 +90,7 @@ class InformationMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genome
+        # See also: https://parasite.wormbase.org/rest/documentation/info/info_genome
         
         """
 
@@ -98,7 +98,7 @@ class InformationMixin:
             'expand': int(expand)
         }
 
-        return wormbase_get(self.version_string + '/info/genomes/' + genome_name, query=params)
+        return wormbase_get('{}/info/genomes/{}'.format(self.version_string, genome_name), query=params)
 
     def get_info_for_all_genomes(self, expand=False):
         """`GET /info/genomes`
@@ -115,7 +115,7 @@ class InformationMixin:
         # Returns
         data (list): a list of dictionaries representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genomes
+        # See also: https://parasite.wormbase.org/rest/documentation/info/info_genomes
         
         """
 
@@ -123,7 +123,7 @@ class InformationMixin:
             'expand': int(expand)
         }
 
-        return wormbase_get(self.version_string + '/info/genomes', query=params)
+        return wormbase_get('{}/info/genomes'.format(self.version_string), query=params)
 
     def get_info_for_genome_with_assembly(self, assembly_id, expand=False):
         """`GET /info/genomes/assembly/:assembly_id`
@@ -140,7 +140,7 @@ class InformationMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genomes_assembly
+        # See also: https://parasite.wormbase.org/rest/documentation/info/info_genomes_assembly
         
         """
 
@@ -148,7 +148,7 @@ class InformationMixin:
             'expand': int(expand)
         }
 
-        return wormbase_get(self.version_string + '/info/genomes/assembly/' + assembly_id, query=params)
+        return wormbase_get('{}/info/genomes/assembly/{}'.format(self.version_string, assembly_id), query=params)
 
     def get_info_for_taxonomy_node(self, taxon_name, expand=False):
         """`GET /info/genomes/taxonomy/:taxon_name`
@@ -166,7 +166,7 @@ class InformationMixin:
         # Returns
         data (list): a list of dictionaries representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/info_genomes_taxonomy
+        # See also: https://parasite.wormbase.org/rest/documentation/info/info_genomes_taxonomy
         
         """
 
@@ -174,7 +174,7 @@ class InformationMixin:
             'expand': int(expand)
         }
 
-        return wormbase_get(self.version_string + '/info/genomes/taxonomy/' + taxon_name, query=params)
+        return wormbase_get('{}/info/genomes/taxonomy/{}'.format(self.version_string, taxon_name), query=params)
 
     def get_quality_scores_for_genome(self, genome_name):
         """`GET /info/quality/:genome_name`
@@ -191,11 +191,11 @@ class InformationMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/info_quality_name
+        # See also: https://parasite.wormbase.org/rest/documentation/info/info_quality_name
         
         """
 
-        return wormbase_get(self.version_string + '/info/quality/' + genome_name)
+        return wormbase_get('{}/info/quality/{}'.format(self.version_string, genome_name))
 
     def get_release_info(self):
         """`GET /info/version`
@@ -211,11 +211,11 @@ class InformationMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/info_wormbase_version
+        # See also: https://parasite.wormbase.org/rest/documentation/info/info_wormbase_version
         
         """
 
-        return wormbase_get(self.version_string + '/info/version/')
+        return wormbase_get('{}/info/version/'.format(self.version_string))
 
     def get_available_species(self):
         """`GET /info/species`
@@ -229,8 +229,8 @@ class InformationMixin:
         # Returns
         data (dict): a dictionary representing the data returned by the API
         
-        # See also: https://parasite.wormbase.org/rest-10/documentation/info/species
+        # See also: https://parasite.wormbase.org/rest/documentation/info/species
         
         """
 
-        return wormbase_get(self.version_string + '/info/species')
+        return wormbase_get('{}/info/species'.format(self.version_string))

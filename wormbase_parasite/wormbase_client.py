@@ -56,4 +56,4 @@ class WormbaseClient(
         """The stringified value of the REST API version number that is being used by this client"""
         
         self.version_string = 'rest-{}'.format(self.version) if self.version else 'rest'
-        """The string that represents the API version in the Wormbase API URLs (e.g., 'rest-10')"""
+        """The string that represents the API version in the Wormbase API URLs (e.g., 'rest')"""

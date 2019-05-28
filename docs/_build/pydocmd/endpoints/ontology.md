@@ -101,7 +101,7 @@ __Returns__
 
 `data (list)`: a list of dictionaries representing the data returned by the API
 
-__See also: https://parasite.wormbase.org/rest-10/documentation/info/ontology_descendants__
+__See also: https://parasite.wormbase.org/rest/documentation/info/ontology_descendants__
 
 
 

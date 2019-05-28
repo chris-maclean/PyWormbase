@@ -60,7 +60,7 @@ class ComparativeGenomicsMixin:
             'sequence': sequence
         }
 
-        return wormbase_get(self.version_string + '/genetree/id/' + id, query=params)
+        return wormbase_get('{}/genetree/id/{}'.format(self.version_string, id), query=params)
 
     def get_gene_tree_by_member(self, 
         id, 
@@ -114,7 +114,7 @@ class ComparativeGenomicsMixin:
             'species': species
         }
 
-        return wormbase_get(self.version_string + '/genetree/member/id/' + id, query=params)
+        return wormbase_get('{}/genetree/member/id/{}'.format(self.version_string, id), query=params)
 
     def get_gene_tree_with_gene(self,
         symbol,
@@ -170,7 +170,7 @@ class ComparativeGenomicsMixin:
             'sequence': sequence
         }
 
-        return wormbase_get(self.version_string + '/genetree/member/symbol/' + species + '/' + symbol, query=params)
+        return wormbase_get('{}/genetree/member/symbol/{}/{}'.format(self.version_string, species, symbol), query=params)
 
     def get_orthologues_by_gene(self,
         gene_id,
@@ -234,7 +234,7 @@ class ComparativeGenomicsMixin:
             raise Exception('Format type {} is not supported. Allowable format values are {}'
                             .format(orthologue_type, ALLOWED_ORTHOS))
 
-        return wormbase_get(self.version_string + '/homology/id/' + gene_id, query=params)
+        return wormbase_get('{}/homology/id/{}'.format(self.version_string, gene_id), query=params)
 
     def get_orthologues_by_symbol(self,
         species,
@@ -304,4 +304,4 @@ class ComparativeGenomicsMixin:
             'type': orthologue_type
         }
 
-        return wormbase_get(self.version_string + '/homology/symbol/' + species + '/' + symbol, query=params)
+        return wormbase_get('{}/homology/symbol/{}/{}/'.format(self.version_string, species, symbol), query=params)
