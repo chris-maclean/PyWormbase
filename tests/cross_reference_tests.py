@@ -16,7 +16,7 @@ class TestCrossReferenceMethods(unittest.TestCase):
             'brugia_malayi_prjna10729', 'Bm994'))
 
     def test_xrefs_for_id(self):
-        self.doTest(self.api.get_xrefs_for_id('ENSG00000157764'))
+        self.doTest(self.api.get_xrefs_for_id('WBGene00221255'))
 
     def test_xrefs_for_gene_and_species(self):
         self.doTest(self.api.get_xrefs_for_gene_and_species(
