@@ -51,35 +51,6 @@ __See also: https://parasite.wormbase.org/rest/documentation/info/lookup__
 
 
 
-<h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.lookup_by_name">lookup_by_name</h3>
-
-```python
-LookupMixin.lookup_by_name(self, name, biotypes=None, level='gene', xrefs=False)
-```
-`GET lookup/genome/:name`
-
-__Arguments__
-
-- __name* (str)__: The production name of the genome
-- __biotypes (str)__: Default: None
-- __level (str)__: Must be one of ['gene', 'transcript', 'translation', 'protein_feature'] Default: 'gene'
-- __xrefs (boolean)__: Default: False
-
-__Example__
-
-```python
-client = wormbase_parasite.WormbaseClient()
-client.lookup_by_id('WBGene00221255')
-```
-
-__Returns__
-
-`data (list)`: a list of dictionaries representing the data returned by the API
-
-__See also: https://parasite.wormbase.org/rest/documentation/info/lookup_genome__
-
-
-
 <h3 id="wormbase_parasite.endpoint_groups.lookup.LookupMixin.batch_lookup_by_id">batch_lookup_by_id</h3>
 
 ```python
