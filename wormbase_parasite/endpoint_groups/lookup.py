@@ -7,7 +7,6 @@ class LookupMixin:
 
     ```
     GET /lookup/id/:id
-    GET /lookup/genome/:name
     POST /lookup/id
     GET /lookup/symbol/:species/:symbol
     POST /lookup/symbol/:species/:symbol
@@ -52,47 +51,6 @@ class LookupMixin:
             'species': species
         }
         return wormbase_get('{}/lookup/id/'.format(self.version_string) + id, query=params)
-
-    def lookup_by_name(self,
-        name,
-        biotypes=None,
-        level='gene',
-        xrefs=False):
-        """`GET lookup/genome/:name`
-        
-        # Arguments
-        name* (str): The production name of the genome
-        biotypes (str): Default: None
-        level (str): Must be one of ['gene', 'transcript', 'translation', 'protein_feature'] Default: 'gene'
-        xrefs (boolean): Default: False
-
-        # Example
-        ```python
-        client = wormbase_parasite.WormbaseClient()
-        client.lookup_by_id('WBGene00221255')
-        ```
-
-        # Returns
-        data (list): a list of dictionaries representing the data returned by the API
-        
-        # See also: https://parasite.wormbase.org/rest/documentation/info/lookup_genome
-        
-        """
-
-        ALLOWED_LEVELS = ['gene', 'transcript',
-                          'translation', 'protein_feature']
-        if level and level not in ALLOWED_LEVELS:
-            raise Exception('Format type {} is not supported. Allowable format values are {}'
-                            .format(level, ALLOWED_LEVELS))
-
-        params = {
-            'biotypes': biotypes,
-            'level': level,
-            'xrefs': int(xrefs)
-        }
-
-        return wormbase_get('{}/lookup/genome/'.format(self.version_string) + name, query=params)
-
 
     def batch_lookup_by_id(self,
         ids,
