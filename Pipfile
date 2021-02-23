@@ -12,6 +12,7 @@ pydoc-markdown = "==2.0.5"
 pylint = "*"
 rope = "*"
 "autopep8" = "*"
+twine = "*"
 
 [requires]
 python_version = "3.8"
