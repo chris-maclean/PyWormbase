@@ -5,13 +5,13 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="wormbase_parasite",
-    version="0.4.0",
-    author="Christopher Anna",
-    author_email="canna12@gmail.com",
+    version="0.5.0",
+    author="Christopher Maclean",
+    author_email="christopher.j.maclean@gmail.com",
     description="An interface to the Wormbase REST API",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/c-anna/PyWormbase",
+    url="https://github.com/chris-maclean/PyWormbase",
     packages=['wormbase_parasite', 'wormbase_parasite.endpoint_groups'],
     classifiers=(
         "Programming Language :: Python :: 3",
