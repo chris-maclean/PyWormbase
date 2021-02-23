@@ -7,7 +7,6 @@ class LookupMixin:
 
     ```
     GET /lookup/id/:id
-    GET /lookup/genome/:name
     POST /lookup/id
     GET /lookup/symbol/:species/:symbol
     POST /lookup/symbol/:species/:symbol
